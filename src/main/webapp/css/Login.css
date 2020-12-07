@@ -1,0 +1,134 @@
+/* Full-width input fields */
+input[type=text], input[type=password], input[type=number], input[type=tel], input[type=email], input[type=date]{
+    width: 100%;
+    padding: 12px 20px;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 20px;
+    display: inline-block;
+    border: 2px solid white;
+    box-sizing: border-box;
+    background: floralwhite;
+    border-radius: 10px 10px 10px 10px;
+}
+
+
+/* INPUT prepend username and password icons*/
+.input-group-prepend {
+    width: 52px;
+    height: 52px;
+    color: rgb(255, 255, 255);
+    background-color:#f3be89;
+    border-color: rgb(255, 255, 255);
+    border-radius: 5px 0px 0px 5px;
+}
+
+
+#input_username {
+    border-radius: 0px 5px 5px 0px;
+}
+
+#input_pwd {
+    border-radius: 0px 5px 5px 0px;
+}
+
+/* Set a style for Login and Register buttons */
+button.logreg {
+    background-color: #f3be89;
+    color: white;
+    padding: 14px 20px;
+    border: 2px solid white;
+    cursor: pointer;
+    margin-right: auto;
+    margin-left: auto;
+    margin-bottom: 80px;
+    margin-top: 40px;
+    width: 100%;
+    border-radius: 10px 10px 10px 10px;
+}
+
+button.pwd {
+    background-color: #f3be89;
+    color: white;
+    padding: 14px 20px;
+    border: 2px solid white;
+    cursor: pointer;
+    margin-right: auto;
+    margin-top: 10px;
+    width: 100%;
+    border-radius: 10px 10px 10px 10px;
+}
+
+.conttitle {
+    padding: 30px;
+    color: rgb(93,103,110);
+}
+
+#Welcome {
+    display: inline-block;
+    margin: 15px;
+    text-align: center;
+}
+
+#Welcome-image {
+    width:30px; 
+    transform: rotate(20deg); 
+    margin-bottom: 15px;
+}
+
+.label {
+    margin: 20px;
+}
+
+.contforgot {
+    margin-top: -10px;
+}
+
+span.psw {
+    margin: 0 auto;
+}
+
+/* The Modal (background) */
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgb(0,0,0); /* Fallback color */
+    background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+    padding-top: 60px;
+}
+
+/* The Close Button (x) */
+.close {
+    position: absolute;
+    right: 25px;
+    top: 0;
+    color: #000;
+    font-size: 35px;
+    font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    cursor: pointer;
+}
+
+/* Modal Content/Box */
+.modal-content {
+    background-color: #cbe3dd;
+    margin: auto;
+    border: 2px solid white;
+
+}
+
+/* Add Zoom Animation */
+.animate {
+    -webkit-animation: animatezoom 0.6s;
+    animation: animatezoom 0.6s
+}

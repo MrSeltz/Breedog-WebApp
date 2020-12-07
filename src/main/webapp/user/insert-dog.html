@@ -1,0 +1,216 @@
+<!DOCTYPE html>
+
+<html lang='eng' xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Web App based on a dog breeders database.">
+
+    <!-- Responsive meta-tag -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+    integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+    <!-- jQuery CDN - UNCOMPRESSED-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
+        crossorigin="anonymous"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+    <script src="../js/scroll-top.js"></script>
+
+    <script src="../js/menu.js"></script>
+    
+    <!--
+    <script src="../js/login_error.js"></script>
+    -->
+    
+    <link rel="stylesheet" href="../css/scroll-top.css">
+
+
+
+    <!-- Index Custom CSS -->
+    <link rel="stylesheet" href="../css/insert-dog-css.css">
+
+    <link rel="icon" href="../media/logo2.png" />
+    <title>BREEDOG.</title>
+
+</head>
+
+<body>
+    <div class="main container-fluid" id="main-container">
+        <!-- ROW-->
+        <div class="row" id="main-row">
+
+
+
+            <div id="insert_form" class="main-content container-fluid col-12 col-sm-9 col-md-10">
+
+                <div class="container col-12 block-elem_2">
+                    <div class="container col-11" id="pop">
+                      
+                        <br /><br />
+
+                        <p id="title">INSERT A NEW DOG</p>
+
+                        <p class="subtitle">Identifiers</p>
+
+                        <label for="dog-microchip">Microchip:</label>
+                        <input type="text" class="form-control" id="dog-microchip"
+                            placeholder="Enter the dog microchip" required>
+
+                        <label for="tattoo-code">Tattoo code:</label>
+                        <input type="text" class="form-control" id="tattoo-code" placeholder="Tattoo code" required>
+
+
+                        <p class="subtitle">Genealogy</p>
+
+                        <label for="kennel">Kennel name:</label>
+                        <input type="text" class="form-control" id="kennel" placeholder="Enter the kennel name"
+                            required>
+
+                        <label for="dog-microchip">Father microchip:</label>
+                        <input type="text" class="form-control" id="father-microchip"
+                            placeholder="Enter the father microchip" >
+
+                        <label for="dog-microchip">Mother microchip:</label>
+                        <input type="text" class="form-control" id="mother-microchip"
+                            placeholder="Enter the mother microchip" >
+
+
+                        <label for="name">Dog name:</label>
+                        <input type="text" class="form-control" id="name" placeholder="Name" required>
+
+                        <p class="subtitle">Dog characteristics</p>
+
+                        <label for="breed">Breed:</label>
+                        <select class="form-control" name="breed" list="breed" id="breed">
+                            <option value="enter" hidden selected>Enter the breed</option>
+                            <option value="166">German Sheperd</option>
+                            <option value="15">Belgian Sheperd</option>
+                            <option value="88">Scottish Sheperd</option>
+                            <option value="111">Golder Retriever</option>
+                            <option value="112">Labrador Retriever</option>
+                            <option value="198">Italian haired hound</option>
+                        </select>
+
+                        <br />
+                        <label for="birth">Birth:</label>
+                        <input type="date" id="birth" class="form-control" placeholder="Birth" required>
+
+                        <label for="radio-btn">Gender:</label>
+                        <div class="radio-btn">
+                            <label><input type="radio" name="sex" value="Male" id="male-radio"
+                                    onclick=""><span></span>Male</label>
+                            <label><input type="radio" name="sex" value="Female" id="female-radio"
+                                    onclick=""><span></span>Female</label>
+                        </div>
+
+                        <label for="coat">Coat color:</label>
+                        <input type="text" id="coat" class="form-control" placeholder="Color">
+                        <label for="weight">Weight:</label>
+                        <input type="number" id="weight" class="form-control" placeholder="Weight (kg)" required>
+                        <label for="height">Height:</label>
+                        <input type="number" id="height" class="form-control"
+                            placeholder="Height at the withers (cm)" required>
+
+                        <label for="charachter">Character:</label>
+                        <input type="text" id="charachter" class="form-control" placeholder="Charcater description">
+
+                        <label for="particular-sign">Particular signs:</label>
+                        <input type="text" id="particular-sign" class="form-control"
+                            placeholder="Possible identifying sign">
+
+                        <label for="teeth">Teeth structure:</label>
+                        <input type="text" id="teeth" class="form-control" placeholder="Description of the teeth">
+
+                        <label for="dna">DNA deposited:</label>
+                        <input type="text" id="dna" class="form-control" placeholder="Deposited and where">
+
+                        <label for="status">Status:</label><br />
+                        <select class="form-control" name="status" list="breed" id="status" required>
+                            <option value="enter" hidden selected>Enter the status</option>
+                            <option value="Attivo">Active</option>
+                            <option value="Maternità">Maternity</option>
+                            <option value="Pensione">Retired</option>
+                            <option value="Adottabile">Adoptable</option>
+                        </select>
+
+                        <br />
+                        <label for="owner">Owner:</label><br />
+                        <input type="text" id="owner" class="form-control" required
+                            placeholder="Owner name"><br />
+
+                        <label for="pathologies">Pathologies:</label>
+                        <select type="select" id="pathology" class="form-control" name="pathology"
+                            placeholder="Enter a pathology" >
+                            <option value="enter" hidden selected>Enter a pathology</option>
+                            <option value="4052">Hip dysplasia</option>
+                            <option value="4053">Elbow dysplasia</option>
+                            <option value="1846">Hypothyroidism</option>
+                            <option value="9218">Epilepsy</option>
+                            <option value="2123">Diabetes</option>
+                        </select>
+                        <br />
+
+                        <label for="severity">Severity:</label><br />
+                        <select type="select" id="severity" class="form-control" name="severity"
+                            placeholder="Enter the severity" >
+                            <option value="enter" hidden selected>Enter a pathology</option>
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
+                            <option value="D">D</option>
+                            <option value="E">E</option>
+                        </select>
+                        
+                        <span id="bar"></span>
+ <!--                       <a href="#member" id="filldetails" onclick="addFields(select)">Add pathology</a>
+                        <a href="#member" id="removedetails" onclick="removeFields()">Remove pathology</a>  -->
+
+                        <br />
+                        <label for="dog-image">
+                            <p>Photo:</p>
+                        </label>
+                        <input type="file" onchange="onFileSelected(event)" id="dog-image" name="dog-image"
+                            class="dog-image" placeholder="Photo of the dog" accept="image/png, image/jpeg"
+                            required>
+                        <br />
+                        <img src="../media/logo.svg" id="dog-img-visualize">
+                        <input type="hidden" class="form-control" id="photo">
+                        
+
+                        <br />
+                        <button id="submit-btn" type="submit">Submit</button>
+                        <br />
+                        
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- change imag e visualized in img tag 
+    <script src="../js/login_error.js"></script>-->
+    <!-- Not logged user  block-->
+    <script src="../js/auth.js"></script>
+
+    <a type="button" id="back2Top" class="btn btn_col my-3 align-items-center" title="Back to top" href="#">
+        <i class="fas  fa-chevron-up fa-lg"></i>
+        <p class="btn-text text-center m-0">TOP</p>
+    </a>
+
+    <script src="../js/insert-dog-js.js"></script>
+
+</body>
+
+</html>

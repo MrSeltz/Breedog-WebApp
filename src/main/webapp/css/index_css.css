@@ -1,0 +1,539 @@
+body, html {
+	height: 100%;
+}
+
+
+/* Background css*/
+.bg {
+	/* The image used */
+	background-image: url("../media/main_bg.svg");
+
+	/* Full height */
+	height: 100%;
+
+	/* Center and scale the image nicely */
+	background-position: center;
+	background-repeat: no-repeat;
+	background-size: cover;
+}
+
+
+/* Body css*/
+body {
+	color: black;
+}
+
+
+/* Logo css (INSIDE NAVBAR)*/
+.row {
+	height: 25vw;
+}
+.row a{
+	width: 25vw;
+	height: 25vw;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+}
+
+#logo {
+	padding: 2vw;
+	width: 25vw;
+}
+
+#center-b {
+	height: 15vw;
+	padding-top: 6vw;
+	margin-left:5vw;
+	border-bottom: medium solid rgb(64, 71, 75);
+}
+
+
+#right-b {
+	height: 15vw;
+	padding-top: 6vw;
+	margin-right:5vw;
+	border-bottom: medium solid rgb(64, 71, 75);
+}
+
+
+
+/* Main content css*/
+.main-content {
+	height: 100%;
+	display: block;
+	padding:3vw;
+	color: #FFFFFF;
+	margin-left: 28vw;
+	margin-top:-8vw;
+
+}
+
+.modal-content{
+	border-radius: 30px;
+}
+
+
+/* ----- BUTTONS ------
+*/
+
+/* Common CSS for all buttons in the page */
+.btn-big {
+	font-size: 2vw;
+	padding: 0.5em;
+	margin-top: 1em;
+	margin-left: 1.5em;
+	width: auto;
+	color: rgb(64, 71, 75);
+}
+
+
+/* Login Button CSS */
+#log-b{
+	border: 2px;
+	border-radius: 3em;
+	border-style: dashed;
+}
+#log-b:hover{
+	color: white;
+	border-style: solid;
+}
+
+
+/* Registration Button CSS */
+#reg-b {
+	background-color: #f3be89; /* Orange */
+	border: none;
+	border-radius: 3em;
+	color: white;
+}
+#reg-b:hover {
+	color: black;
+}
+
+
+/* Learn-more Button css */
+#lea-b {
+	color: white;
+	border-style: solid;
+	border: 2px solid white;
+	border-radius: 10px;
+	padding: 10px 10px;
+	margin-left: 2em;
+}
+#lea-b:hover {
+	color: black;
+	border: 2px solid black;
+	border-style: solid;
+}
+
+
+/* About-us button */
+#about-b {
+	font-size: 1.5vw;
+	outline: none;
+  	border: 0;
+  	box-shadow: none;
+  	background-color: transparent;
+  	text-decoration: none;
+  	float: right;
+  	color: rgb(64, 71, 75);
+  	padding-top: 2vw;
+  	padding-right:0em;
+}
+#about-b:hover{
+	color: white;
+}
+
+
+
+/* ---------------- LEARN MORE POP-UP --------------------------------*/
+div.square-overlay {
+
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0px;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: transparent;
+    background-color: transparent;
+    padding-top: 100px;
+    align-content: center;
+
+}
+
+/* Square Content/Box */
+.square-content {
+
+    background: #FFE1C4;
+    border-radius: 30px;
+    text-align: center;
+    width: auto;
+    height: 750px;
+    padding-left: 10px;
+    padding-top: 10px;
+}
+
+
+/* Custom radio buttons */
+.radio-btn {
+
+    margin-left: 35px;
+    margin-top: 20px;
+
+}
+/* Removes original button */
+.radio-btn input[type='radio'] {
+
+    display: none;
+
+}
+/* Styles outer circle */
+.radio-btn label:before {
+
+    content: " ";
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    margin: 0 30px 0 0;
+    width: 40px;
+    height: 40px;
+    border-radius: 100%;
+    cursor: pointer;
+    border: 4px solid #725c5c;
+    background-color: transparent;
+
+}
+
+.radio-btn label {
+
+    position: relative;
+
+}
+/* Styles inside circle */
+.radio-btn label input[type='radio']:checked+span {
+
+    border-radius: 100%;
+    width: 40px;
+    height: 40px;
+    position: absolute;
+    top: 5px;
+    cursor: pointer;
+    display: block;
+    background-color: #725c5c;
+
+}
+
+p.big {
+	padding: 1em;
+    color: #725c5c;
+    font-size: 3em;
+    height: 70%;
+}
+
+
+#try-b{
+	margin-top:1em;
+	margin-bottom:1em;
+	text-align: center;
+	font-size: 2em;
+	border: 0px;
+	border-radius: 3em;
+	border-style: dashed;
+	box-shadow: none;
+  	background-color: #F3BE89;
+  	text-decoration: none;
+  	float: center;
+  	margin-top: 0em;
+	margin-left: 0em;
+  	color: white;
+}
+#try-b:hover{
+  	color: black;
+}
+
+.wrapper{
+	max-width: 600px;
+	max-height: 100px;
+	padding-top: 50px;
+	display: flex;
+	justify-content: left;
+
+}
+
+.search_box{
+	width: 100%;
+	position: relative;
+}
+
+.search_box input[type="text"] {
+	width: 100%;
+	padding: 20px;
+	padding-right: 80px;
+	box-sizing: border-box;
+	background: rgba(0, 0, 0, 0.2);
+	border: 2px solid #FFFFFF;
+	border-radius: 10px;
+	font-size: 22px;
+	outline: none;
+	color: #FFFFFF;
+}
+
+.change::-webkit-input-placeholder{
+	color: #FFFFFF;
+}
+
+.change::-moz-placeholder{
+	color: #FFFFFF;
+}
+
+.change::-ms-input-placeholder{
+	color: #FFFFFF;
+}
+
+.fa-search{
+	position: absolute;
+	top: 80%;
+	transform: translateY(-50%);
+	right: 25px;
+	color: #FFFFFF;
+	font-size: 35px;
+}
+
+.modal-backdrop {
+	z-index: 0;
+  }
+
+.carousel-item{
+	width: 400px;
+	height: 400px;
+	min-width: 10vw;
+	min-height: 10vh;
+	text-align: center;
+	font-size: 35px;
+	padding-left: 6vw;
+	padding-top: 2vh;
+	justify-content: center;
+
+  }
+
+.carousel-inner{
+	width: 400px;
+	height: 400px;
+	justify-content: center;
+	vertical-align: middle;
+
+  }
+
+#carouselExampleIndicators{
+
+	background-color: rgb(248, 191, 134) ;
+	border-radius: 28px;
+  }
+
+.carousel-control-prev{
+	padding-right: 15vw;
+	padding-top: 5vh;
+	justify-content: center;
+}
+
+.carousel-control-next{
+	padding-left: 15vw;
+	padding-top: 5vh;
+	justify-content: center;
+}
+
+.modal-header{
+	justify-content: center;
+	color: #707070;
+}
+
+#about_text{
+	color: #707070;
+	text-align: center;
+}
+
+/* ------------------------------------MOBILE CSS----------------------------------------------------*/
+/* On screens that are 414px wide or less (should be latest Iphone Standard) */
+@media screen and (max-width: 600px) {
+
+	body, html {
+		height: 100%;
+	}
+
+	.bg {
+		/* The image used */
+		background-image: url("../media/main_bg.svg");
+
+		/* Full height */
+		height: 150%;
+
+		/* Center and scale the image nicely */
+		background-position: top;
+		background-repeat: no-repeat;
+		background-size: cover;
+	}
+
+	body {
+		color: black;
+	}
+
+	.row {
+		height: 70vw;
+	}
+	.row a{
+		width: 100vw;
+		height: 70vw;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+	}
+
+	#logo {
+		padding: 2vw;
+		width: 70vw;
+	}
+
+	#center-b {
+		height: 35vw;
+		width: 100vw;
+		padding-top: 0vw;
+		padding-bottom: 30px;
+		margin-left:0vw;
+		margin-right:0vw;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+
+		border-bottom-color: white;
+		border-top: medium solid rgb(64, 71, 75);
+		border-bottom-width: 1px;
+		border-top-width: 1.5px;
+
+		background-color: rgba(253, 245, 238, 0.281);
+
+	}
+
+
+	#right-b {
+		display:none;
+		height: 30vw;
+		width: 0px;
+		padding-top: 6vw;
+		margin-right:5vw;
+		border-bottom: medium solid #707070;
+	}
+
+
+
+	/* Main content css*/
+	.main-content {
+		height: 100%;
+		display: block;
+		margin-top: 35vw;
+		padding:5vw;
+		margin-left: 0vw;
+		align-items: center;
+		color: #FFFFFF;
+	}
+
+
+		/* ----- BUTTONS ------
+	*/
+
+	/* Common CSS for all buttons in the page */
+	.btn-big {
+		font-size: 6vw;
+		padding: 0.5em;
+		margin-top: 1em;
+		margin-left: 3vw;
+		margin-right: 3vw;
+		text-align: center;
+		width: 30vw;
+		color: rgb(64, 71, 75);
+	}
+
+
+	/* Login Button CSS */
+	#log-b{
+		border: 2px;
+		border-radius: 3em;
+		border-style: dashed;
+	}
+	#log-b:hover{
+		color: white;
+		border-style: solid;
+	}
+
+
+	/* Registration Button CSS */
+	#reg-b {
+		background-color: #f3be89; /* Orange */
+		border: none;
+		border-radius: 3em;
+		color: white;
+	}
+	#reg-b:hover {
+		color: black;
+	}
+
+
+	/* Learn-more Button css */
+	#lea-b a {
+		color: #707070;
+		border: 2px solid white;
+		text-decoration: none;
+		border-radius: 15px;
+		padding: 10px 10px;
+		margin-left: 2em;
+	}
+	#lea-b a:hover {
+		color: black;
+		border: 2px solid black;
+		border-style: dashed;
+	}
+
+
+	/* About-us button */
+	#about-b {
+		font-size: 2em;
+		outline: none;
+	  	border: 0;
+	  	box-shadow: none;
+	  	background-color: transparent;
+	  	text-decoration: none;
+	  	float: right;
+	  	color: #707070;
+	  	padding-top: 0em;
+	  	padding-right:0em;
+	}
+	#about-b:hover{
+		color: white;
+	}
+
+	/* Arrows in learn more */
+	.carousel-control-prev-icon{
+		display: none;
+	}
+
+	.carousel-control-next-icon{
+		display: none;
+	}
+}
+form {
+  display:flex;
+  flex-direction:row;
+}
+@media only screen and (max-width: 600px)  {
+      h1 {
+          font-size: 28px;
+      }
+			#lea-b {
+				  font-size: 18px;
+			}
+			.change {
+				  font-size: 18px !important;
+			}
+}

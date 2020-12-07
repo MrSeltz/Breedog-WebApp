@@ -1,0 +1,66 @@
+[
+	{
+		"name" : "Fido",
+		"kennel_name" : "IL CANILE",
+		"microchip_code" : "ABCDEFGHIL12345",
+		"tatoo_code" : "",
+		"birth" : "01/02/19",
+		"gender" : "M",
+		"owner" : "",
+		"status" : "Active",
+		"fci_code" : "0123456789ABCABCABCD",
+		"group" : "3",
+		"breed_name" : "Labrador",
+		"height" : "50",
+		"weight" : "30",
+		"coat_color" : "Orange",
+		"character" : "Shy",
+		"teeth_structure" : "",
+		"particular_sign" : "Thunder on left eye",
+		"dna" : "Erediti Laboratorio Analisi",
+		"pathology" : [
+							{
+								"code" : "0A",
+								"name" : "Hip Dysplasia",
+								"severity" : "HD1"
+							},
+							{
+								"code" : "1B",
+								"name" : "Elbow Dysplasia",
+								"severity" : "FPC"
+							}
+						],
+		"awards" : [
+						{
+							"event" : "Esposizione Palermo",
+							"date" : "02/02/20",
+							"location" : "Palermo",
+							"competition" : "Agility"
+						},
+						{
+							"event" : "Esposizione Torino",
+							"date" : "05/02/20",
+							"location" : "Torino",
+							"competition" : "Agility"
+						}
+					],
+		"genealogy" : {
+						"father" : "Aramis",
+						"mother" : "Audrey",
+						"sons" : [
+									{
+										"date" : "12/12/19",
+										"name" : "Pluto"
+									},
+									{
+										"date" : "13/12/19",
+										"name" : "Pippo"
+									},
+									{
+										"date" : "14/12/19",
+										"name" : "Paperino"
+									}
+								]
+						}
+	}
+]

@@ -1,0 +1,176 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE xml>
+
+<web-app id="Kennel-WA" version="1.0" xmlns="http://xmlns.jcp.org/xml/ns/javaee" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://java.sun.com/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd">
+
+	<display-name>Kennel-WA</display-name>
+	<description>Web App based on a dog breeders database.</description>
+
+	<welcome-file-list>
+		<welcome-file>/index.html</welcome-file>
+	</welcome-file-list>
+
+	<!-- Servlets -->
+	<!-- login -->
+	<servlet>
+		<servlet-name>Auth</servlet-name>
+		<servlet-class>it.unipd.dei.breedog.servlet.AuthServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Auth</servlet-name>
+		<url-pattern>/auth</url-pattern>
+	</servlet-mapping>
+
+	<!--logout -->
+	<servlet>
+		<servlet-name>Logout</servlet-name>
+		<servlet-class>it.unipd.dei.breedog.servlet.LogoutServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Logout</servlet-name>
+		<url-pattern>/user/logout</url-pattern>
+	</servlet-mapping>
+
+	<!-- signup -->
+	<servlet>
+		<servlet-name>Signup</servlet-name>
+		<servlet-class>it.unipd.dei.breedog.servlet.SignupServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Signup</servlet-name>
+		<url-pattern>/signup</url-pattern>
+	</servlet-mapping>
+
+
+	<!-- Get userInfo -->
+	<servlet>
+		<servlet-name>GetBreeder</servlet-name>
+		<servlet-class>it.unipd.dei.breedog.servlet.LoadUserServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GetBreeder</servlet-name>
+		<url-pattern>/user/breeder/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- Get Dog -->
+	<servlet>
+		<servlet-name>GetDog</servlet-name>
+		<servlet-class>it.unipd.dei.breedog.servlet.DogServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GetDog</servlet-name>
+		<url-pattern>/user/dog/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- Get Dog List -->
+	<servlet>
+		<servlet-name>GetDogs</servlet-name>
+		<servlet-class>it.unipd.dei.breedog.servlet.DogListServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>GetDogs</servlet-name>
+		<url-pattern>/user/breeder/dog/*</url-pattern>
+	</servlet-mapping>
+
+	<!-- create dog -->
+	<servlet>
+		<servlet-name>CreateDog</servlet-name>
+		<servlet-class>it.unipd.dei.breedog.servlet.CreateDogServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>CreateDog</servlet-name>
+		<url-pattern>/create-dog</url-pattern>
+	</servlet-mapping>
+
+	<!-- insert genealogy -->
+	<servlet>
+		<servlet-name>Genealogy</servlet-name>
+		<servlet-class>it.unipd.dei.breedog.servlet.GenealogyServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Genealogy</servlet-name>
+		<url-pattern>/genealogy</url-pattern>
+	</servlet-mapping>
+
+	<!-- insert pathology in whichas -->
+	<servlet>
+		<servlet-name>Pathology</servlet-name>
+		<servlet-class>it.unipd.dei.breedog.servlet.PathologyServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Pathology</servlet-name>
+		<url-pattern>/pathology</url-pattern>
+	</servlet-mapping>
+	
+	<!-- INSERT/DELETE COMPETITION -->
+	<servlet>
+		<servlet-name>Competition</servlet-name>
+		<servlet-class>it.unipd.dei.breedog.servlet.CompetitionServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>Competition</servlet-name>
+		<url-pattern>/competition</url-pattern>
+	</servlet-mapping>
+
+	<!-- Search Page -->
+	<servlet>
+		<servlet-name>SearchPage</servlet-name>
+		<servlet-class>it.unipd.dei.breedog.servlet.SearchPageServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SearchPage</servlet-name>
+		<url-pattern>/search</url-pattern>
+	</servlet-mapping>
+
+	<!-- Search Dogs -->
+	<servlet>
+		<servlet-name>SearchDogs</servlet-name>
+		<servlet-class>it.unipd.dei.breedog.servlet.SearchDogsServlet</servlet-class>
+	</servlet>
+	<servlet-mapping>
+		<servlet-name>SearchDogs</servlet-name>
+		<url-pattern>/searchDogs</url-pattern>
+	</servlet-mapping>
+
+	<!-- Protecting resources -->
+	<filter>
+		<filter-name>AuthFilter</filter-name>
+		<filter-class>it.unipd.dei.breedog.filter.AuthFilter</filter-class>
+	</filter>
+	<filter-mapping>
+		<filter-name>AuthFilter</filter-name>
+		<url-pattern>/user/*</url-pattern>
+	</filter-mapping>
+
+	<!-- Database connection pool -->
+	<resource-ref>
+		<description>Connection pool to the database</description>
+		<res-ref-name>jdbc/breedog</res-ref-name>
+		<res-type>javax.sql.DataSource</res-type>
+		<res-auth>Container</res-auth>
+	</resource-ref>
+	
+	<context-param>
+		<param-name>host</param-name>
+		<param-value>smtp.gmail.com</param-value>
+	</context-param>
+	
+	<context-param>
+		<param-name>port</param-name>
+		<param-value>587</param-value>
+	</context-param>
+	
+	<context-param>
+		<param-name>email</param-name>
+		<param-value>elia01.secchiero@gmail.com</param-value>
+	</context-param>
+	<context-param>
+		<param-name>name</param-name>
+		<param-value>Elia</param-value>
+	</context-param>
+	<context-param>
+		<param-name>pass</param-name>
+		<param-value>yaneospksybxympn</param-value>
+	</context-param>
+
+</web-app>

@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+
+<html lang='eng' xmlns="http://www.w3.org/1999/html">
+    
+    <head>
+        
+        <!-- Responsive meta-tag -->
+	   <meta http-equiv="X-UA-Compatible" content="ie=edge">
+	   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	   <!-- Bootstrap CSS -->
+	   <link rel="stylesheet" href="/src/main/webapp/css/bootstrap.min.css">
+
+	   <!-- Index Custom CSS -->
+	   <link rel="stylesheet" href="/src/main/webapp/css/learn-more-css.css">
+        
+        <title>BREEDOG.</title>
+    </head>
+    
+    <body>
+        <!-- Background -->
+        <div class="bg container-fluid">
+
+            <div class="row">
+                <!-- Logo -->
+                <div class="col-3">
+                    <a href="index.html">
+                        <img src="/src/main/webapp/media/logo.svg" class="img-responsive" style="width:100%" alt="Responsive image">
+                    </a>
+                </div>
+            </div> <!-- end of more contents windows -->
+            <div class="square-overlay container-fluid">
+                <div class="square-content col-6">
+                    <p class="big container-fluid" id="more-content">
+                        <strong>Breedog.</strong> is the right tool <br />
+                        for breeders from all <br />
+                        around the world to find the <br />
+                        right partners for their <br />
+                        dogs.
+                    </p>
+                    <form>
+                        <button class="btn-big btn-orange">Try it for free</button>
+                        <br />
+                        <div class="radio-btn" id="radio-buttons">
+                            <label><input type="radio" name="page-content" value="first" checked id="first-radio" onclick="changeP(value)"><span></span></label>
+                            <label><input type="radio" name="page-content" value="second" id="second-radio" onclick="changeP(value)"><span></span></label>
+                            <label><input type="radio" name="page-content" value="third" id="third-radio" onclick="changeP(value)"><span></span></label>
+                            <label><input type="radio" name="page-content" value="fourth" id="fourth-radio" onclick="changeP(value)"><span></span></label>
+                        </div>
+                    </form>
+                </div>
+            </div><!-- End of square-overlay-->
+        </div><!-- End background container-->
+        
+        <!-- script for change the p element -->
+        <script type="text/javascript">
+            
+            var myVar = setInterval(moveForward, 5000);
+
+            function changeP(value) {
+                
+                clearInterval(myVar);
+                myVar = setInterval(moveForward, 5000);
+
+                if(value === "first") {
+
+                    document.getElementById("more-content").innerHTML= "<strong>Breedog.</strong> is the right tool<br />for breeders from all <br />around the world to find the<br />right partners for their <br />dogs."
+                    
+                } else if(value === "second") {
+
+                    document.getElementById("more-content").innerHTML = "<strong>Breedog.</strong> bla bla<br /> bla bla bla <br /><br /><br /><br />";
+                    
+                } else if(value === "third") {
+
+                    document.getElementById("more-content").innerHTML = "<strong>Breedog.</strong> bla bla<br /> bla bla bla <br /><br /><br /><br />";
+                    
+                } else if(value === "fourth") {
+
+                    document.getElementById("more-content").innerHTML = "<strong>Breedog.</strong> bla bla<br /> bla bla bla <br /><br /><br /><br />";
+                    
+                }
+
+            }
+
+            function moveForward() {
+                
+                var first = document.getElementById("first-radio");
+                var second = document.getElementById("second-radio");
+                var third = document.getElementById("third-radio");
+                var fourth = document.getElementById("fourth-radio");
+                var value = "";
+                
+                if(first.checked == true) {
+                    first.checked = false;
+                    second.checked = true;
+                    value = "second";
+                    changeP(value);
+                    
+                } else if(second.checked == true) {
+                    second.checked = false;
+                    third.checked = true;
+                    value = "third";
+                    changeP(value);
+                
+                } else if(third.checked == true) {
+                    third.checked = false;
+                    fourth.checked = true;
+                    value = "fourth";
+                    changeP(value);
+                
+                } else if(fourth.checked == true) {
+                    fourth.checked = false;
+                    first.checked = true;
+                    value = "first";
+                    changeP(value);
+                }
+            
+            }
+
+        </script> <!-- end of the js script -->
+        
+    </body>
+</html>

@@ -1,0 +1,718 @@
+<!DOCTYPE html>
+
+<html lang='eng' xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Web App based on a dog breeders database.">
+
+    <!-- Responsive meta-tag -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/dog.css">
+    <link rel="stylesheet" href="../css/scroll-top.css">
+    <link rel="stylesheet" href="../css/menu_css.css">
+
+    <!-- jQuery CDN-->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
+        crossorigin="anonymous"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+
+    <!-- JS -->
+    <script src="../js/auth.js"></script>
+    <script src="../js/menu.js"></script>
+    <script src="../js/scroll-top.js"></script>
+    <script src="../js/login_error.js"></script>
+
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+
+    <link rel="icon" href="../media/logo2.png" />
+    <title>BREEDOG.</title>
+
+</head>
+
+<body>
+    <div class="main container-fluid" id="main-container">
+
+        <!-- ROW-->
+        <div class="row" id="main-row">
+            <!-- Main Content -->
+            <div class="main-content col-12 col-sm-9 col-md-10">
+                <!-- TOP SEARCH BOX-->
+                <div class="container p-3">
+                    <form action="../search" method="GET">
+                        <div class="input-group flex-nowrap">
+                            <input type="text" class="form-control" placeholder="Search Something!" name="query">
+                            <div class="input-group-prepend">
+                                <button class="btn btn_col" type="submit"><i class="fas fa-search"></i>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+                <!-- DOG PROFILE MAIN INFORMATIONS-->
+                <div class="container mx-auto my-3">
+                    <h1 id="dog_name" class="p-3 mb-2"></h1>
+                    <!-- First Row  ----- BASIC PROFILE-->
+                    <div class="block-elem_2 row p-4 mb-2">
+                        <!-- DOG PHOTO-->
+                        <div class="container col-5  p-3 d-flex flex-wrap align-items-center my-2 box_container">
+                            <img src="" id="dog_photo" class="img-fluid img-thumbnail rounded" alt="Responsive image">
+                        </div>
+
+                        <!-- DOG BASIC INFORMATIONS-->
+                        <div class="container col-5  p-3 my-2 box_container">
+                            <h3>Basic Infos</h3>
+                            <table class="table table-hover">
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Kennel Name</td>
+                                        <td id="kennel_name"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Microchip Code</td>
+                                        <td id="microchip_code"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Tatoo Code</td>
+                                        <td id="tatoo_code"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Birth Date</td>
+                                        <td id="birth"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Gender</td>
+                                        <td id="gender"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Owner</td>
+                                        <td id="owner"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Status</td>
+                                        <td id="status"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Second Row -----  ADVANCED DATA-->
+                    <div class="block-elem_2 row p-4">
+                        <!-- Dog Breed Data-->
+                        <div class="container col-5   my-2 box_container">
+                            <h3> Breed</h3>
+                            <table class="table table-hover">
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">FCI Code</td>
+                                        <td id="fci_code"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Group</td>
+                                        <td id="group"> </td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Breed Name</td>
+                                        <td id="breed_name"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <!-- Dog Traits Data-->
+                        <div class="container col-5 my-2 box_container">
+                            <h3>Traits</h3>
+                            <table class="table table-hover">
+                                <tbody>
+                                    <tr>
+                                        <th scope="row">Height</td>
+                                        <td id="height"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Weight</td>
+                                        <td id="weight"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Coat Color</td>
+                                        <td id="coat_color"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Character</td>
+                                        <td id="character"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Teeth Structure</td>
+                                        <td id="teeth_structure"></td>
+                                    </tr>
+                                    <tr>
+                                        <th scope="row">Particular Sign</td>
+                                        <td id="particular_sign"></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Third Row -----  PATHOLOGY-->
+                    <div class="block-elem_2 row p-4 my-2" id="pathology-container">
+                        <div class="container ">
+                            <h3 class="text-center m-4">Pathology <a id="update-pathology-btn" class="edit"
+                                    data-toggle="modal" data-target="#update-pathology-modal"><i
+                                        class="fas fa-pencil-alt"></i></a></h3>
+                            <table class="table table-hover text-center">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Code</th>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Severity</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="pathology">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Fourth Row ---AWARDS -->
+                    <div class="block-elem_2 row p-4 my-2" id="awards-container">
+                        <div class="container ">
+                            <h3 class="text-center m-4">Awards <a id="update-awards-btn" class="edit" data-toggle="modal"
+                                data-target="#update-competition-modal"><i
+                                        class="fas fa-pencil-alt"></i></a></h3>
+                            <label class="float-right">Show Victory Only
+                                <label class="switch">
+                                    <input type="checkbox" value="false" id="victory-check" onclick="load_dog()">
+                                    <span class="slider round"></span>
+                                </label>
+                            </label>
+                            <table class="table table-hover text-center">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Competition</th>
+                                        <th scope="col">Type</th>
+                                        <th scope="col">Event</th>
+                                    </tr>
+                                </thead>
+                                <tbody id="awards">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+
+                    <!-- Fifth Row -----  Family-->
+                    <div class="block-elem_2 row p-4" id="genealogy-container">
+                        <!-- Parents Data-->
+                        <div class="container ">
+                            <h3 class="text-center my-1">Parents</h3>
+                            <table class="table table-hover text-center mtb3">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Microchip</th>
+                                        <th scope="col">Role</td>
+                                    </tr>
+                                </thead>
+                                <tbody id="parents">
+                                </tbody>
+                            </table>
+
+                            <!-- Sons Data-->
+                            <h3 class="text-center mt-3">Sons <a id="update-sons-btn" class="edit" data-toggle="modal"
+                                    data-target="#update-sons-modal"><i class="fas fa-pencil-alt"></i></a></h3>
+                            <table class="table table-hover text-center my-2">
+                                <thead>
+                                    <tr>
+                                        <th scope="col">Name</th>
+                                        <th scope="col">Microchip</th>
+                                        <th scope="col">Birth</td>
+                                    </tr>
+                                </thead>
+                                <tbody id="sons">
+                                </tbody>
+                            </table>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- MODAL SHOW COMPETITION -->
+    <div class="modal fade" id="competition-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <!-- Modal Content -->
+            <form class="modal-content">
+
+                <!-- Modal Header-->
+                <div class="modal-header">
+                    <h5 class="modal-title text-center">Competition Info</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body text-left">
+
+                    <!-- Competition ID -->
+                    <div class="form-group row m-3">
+                        <label for="modal_comp_id" class="col-4 col-sm-3 col-form-label">ID</label>
+                        <input type="user" readonly class="col-8 col-sm-9 form-control" id="modal_comp_id">
+                    </div>
+
+                    <!-- Competition TYPE -->
+                    <div class="form-group row m-3">
+                        <label for="modal_comp_type" class="col-4 col-sm-3 col-form-label">Type</label>
+                        <input type="user" readonly class="col-8 col-sm-9 form-control" id="modal_comp_type">
+                    </div>
+
+                    <!-- Competition  GROUP-->
+                    <div class="form-group row m-3">
+                        <label for="modal_comp_group" class="col-4 col-sm-3 col-form-label">Group</label>
+                        <input type="user" readonly class="col-8 col-sm-9 form-control" id="modal_comp_group">
+                    </div>
+
+                    <!-- Competition CLASS -->
+                    <div class="form-group row m-3">
+                        <label for="modal_comp_class" class="col-4 col-sm-3 col-form-label">Class</label>
+                        <input type="user" readonly class="col-8 col-sm-9 form-control" id="modal_comp_class">
+                    </div>
+
+                    <!-- Competition WIN -->
+                    <div class="form-group row m-3">
+                        <label for="modal_comp_win" class="col-4 col-sm-3 col-form-label">Won</label>
+                        <input type="user" readonly class="col-8 col-sm-9 form-control" id="modal_comp_win">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- MODAL SHOW EVENT -->
+    <div class="modal fade" id="event-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <!-- Modal Content -->
+            <form class="modal-content">
+
+                <!-- Modal Header-->
+                <div class="modal-header">
+                    <h5 class="modal-title text-center">Event Info</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body text-left">
+
+                    <!-- Event ID -->
+                    <div class="form-group row m-3">
+                        <label for="modal_event_id" class="col-4 col-sm-3 col-form-label">ID</label>
+                        <input type="user" readonly class="col-8 col-sm-9 form-control" id="modal_event_id">
+                    </div>
+
+                    <!-- Event LOCATION -->
+                    <div class="form-group row m-3">
+                        <label for="modal_event_location" class="col-4 col-sm-3 col-form-label">Location</label>
+                        <input type="user" readonly class="col-8 col-sm-9 form-control" id="modal_event_location">
+                    </div>
+
+                    <!-- Event  BEGIN-->
+                    <div class="form-group row m-3">
+                        <label for="modal_event_begin" class="col-4 col-sm-3 col-form-label">Begin</label>
+                        <input type="user" readonly class="col-8 col-sm-9 form-control" id="modal_event_begin">
+                    </div>
+
+                    <!-- Event FINISH -->
+                    <div class="form-group row m-3">
+                        <label for="modal_event_finish" class="col-4 col-sm-3 col-form-label">Finish</label>
+                        <input type="user" readonly class="col-8 col-sm-9 form-control" id="modal_event_finish">
+                    </div>
+
+                    <!-- Event ZIP -->
+                    <div class="form-group row m-3">
+                        <label for="modal_event_zip" class="col-4 col-sm-3 col-form-label">Zip</label>
+                        <input type="user" readonly class="col-8 col-sm-9 form-control" id="modal_event_zip">
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- MODAL INFO-->
+    <div class="modal fade" id="update-info-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <!-- Modal Content -->
+            <form class="modal-content">
+
+                <!-- Modal Header-->
+                <div class="modal-header">
+                    <h5 class="modal-title text-center">Update Info</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body text-left">
+                    <!-- Dog photo-->
+                    <div class="form-group row m-3">
+                        <div class="container col-5  p-3 d-flex flex-wrap align-items-center my-2 box_container">
+                            <img id="modal_dog_photo" class="img-fluid img-thumbnail rounded dog-image"
+                                alt="Responsive image">
+                        </div>
+                        <input type="file" onchange="onFileSelected(event)" id="dog-image" class="text-center"
+                            placeholder="Photo of the user" accept="image/png, image/jpeg" required>
+                        </input>
+                        <input type="hidden" class="form-control" id="photo">
+                    </div>
+
+                    <!-- Actual Name -->
+                    <div class="form-group row m-3">
+                        <label for="modal_actual_name" class="col-5 col-sm-4 col-form-label">Name</label>
+                        <input type="text" class="col-8 col-sm-8 form-control" id="modal_actual_name">
+                    </div>
+                    <!-- Actual Birth -->
+                    <div class="form-group row m-3">
+                        <label for="modal_actual_birth" class="col-5 col-sm-4 col-form-label">Birth</label>
+                        <input type="date" class="col-8 col-sm-8 form-control" id="modal_actual_birth">
+                    </div>
+                    <!-- Actual Owner -->
+                    <div class="form-group row m-3">
+                        <label for="modal_actual_owner" class="col-5 col-sm-4 col-form-label">Owner</label>
+                        <input type="text" class="col-8 col-sm-8 form-control" id="modal_actual_owner">
+                    </div>
+                    <!-- Actual Status -->
+                    <div class="form-group row m-3">
+                        <label for="modal_actual_status" class="col-5 col-sm-4 col-form-label">Status</label>
+                        <!--<input type="text" class="col-8 col-sm-8 form-control" id="modal_actual_status">-->
+                        <select class="col-8 col-sm-8 form-control" name="status" list="breed" id="modal_actual_status">
+                            <option value="Attivo">Active</option>
+                            <option value="Maternità">Maternity</option>
+                            <option value="Pensione">Retired</option>
+                            <option value="Adottabile">Adoptable</option>
+                        </select>
+                    </div>
+
+                    <!-- Actual heigth -->
+                    <div class="form-group row m-3">
+                        <label for="modal_actual_height" class="col-5 col-sm-4 col-form-label">Height</label>
+                        <input type="text" class="col-8 col-sm-8 form-control" id="modal_actual_height">
+                    </div>
+                    <!-- Actual Weight -->
+                    <div class="form-group row m-3">
+                        <label for="modal_actual_weight" class="col-5 col-sm-4 col-form-label">Weight</label>
+                        <input type="text" class="col-8 col-sm-8 form-control" id="modal_actual_weight">
+                    </div>
+                    <!-- Actual Color -->
+                    <div class="form-group row m-3">
+                        <label for="modal_actual_color" class="col-5 col-sm-4 col-form-label">Color</label>
+                        <input type="text" class="col-8 col-sm-8 form-control" id="modal_actual_color">
+                    </div>
+                    <!-- Actual Character -->
+                    <div class="form-group row m-3">
+                        <label for="modal_actual_character" class="col-5 col-sm-4 col-form-label">Character</label>
+                        <input type="text" class="col-8 col-sm-8 form-control" id="modal_actual_character">
+                    </div>
+                    <!-- Actual Teeth -->
+                    <div class="form-group row m-3">
+                        <label for="modal_actual_teeth" class="col-5 col-sm-4 col-form-label">Teeth</label>
+                        <input type="text" class="col-8 col-sm-8 form-control" id="modal_actual_teeth">
+                    </div>
+                    <!-- Actual Signs -->
+                    <div class="form-group row m-3">
+                        <label for="modal_actual_signs" class="col-5 col-sm-4 col-form-label">Sign</label>
+                        <input type="text" class="col-8 col-sm-8 form-control" id="modal_actual_signs">
+                    </div>
+                    <!-- Submit Changes -->
+                    <div class="text-center">
+                        <button type="button" class="btn btn_col" id="submit-update-info-btn">Save Changes</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <!-- MODAL PATHOLOGY-->
+    <div class="modal fade" id="update-pathology-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <!-- Modal Content -->
+            <form class="modal-content">
+
+                <!-- Modal Header-->
+                <div class="modal-header">
+                    <h5 class="modal-title text-center">Edit Pathology</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body text-left">
+
+                    <!-- SELECT FORM ACTION-->
+                    <div class="form-group row m-3">
+                        <label class="col-4 col-sm-3 col-form-label">Action</label>
+                        <select id="pathology_action" class="col-8 col-sm-9 form-control" type="text">
+                            <option value="add_p" hidden selected>Add Pathology</option>
+                            <option value="add_p">Add Pathology</option>
+                            <option value="remove_p">Remove Pathology</option>
+                        </select>
+                    </div>
+
+                    <!-- Pathology Code-->
+                    <div class="form-group row m-3" id="modal_p_code">
+                        <label for="modal_pathology" class="col-4 col-sm-3 col-form-label">Pathology</label>
+                        <select type="select" id="modal_pathology" class="col-8 col-sm-9 form-control" name="pathology"
+                            placeholder="Enter a pathology" >
+                            <option value="enter" hidden selected>Enter a pathology</option>
+                            <option value="4052">Hip dysplasia</option>
+                            <option value="4053">Elbow dysplasia</option>
+                            <option value="1846">Hypothyroidism</option>
+                            <option value="9218">Epilepsy</option>
+                            <option value="2123">Diabetes</option>
+                        </select>
+                    </div>
+
+                    <!-- Pathology Severity-->
+                    <div class="form-group row m-3" id="modal_p_severity">
+                        <label for="modal_pathology_severity" class="col-4 col-sm-3 col-form-label">Severity</label>
+                        <select id="pathology_severity" class="col-8 col-sm-9 form-control" type="text">
+                            <option value="enter" hidden selected>Select pathology severity</option>
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="C">C</option>
+                            <option value="D">D</option>
+                            <option value="E">E</option>
+                        </select>
+                    </div>
+
+
+                    <div class="text-center" id="modal_padd">
+                        <!-- add pathology-->
+                        <button type="button" class="btn btn_col m-1" id="submit-add-pathology-btn" onclick="add_pathology()">Add
+                            Pathology</button>
+                    </div>
+
+                    <div class="text-center" id="modal_premove" style="display:none;">
+                        <button type="button" class="btn btn_col m-1" id="submit-remove-pathology-btn" onclick="remove_pathology()">Remove
+                            Pathology</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- MODAL SONS-->
+    <div class="modal fade" id="update-sons-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <!-- Modal Content -->
+            <form class="modal-content">
+
+                <!-- Modal Header-->
+                <div class="modal-header">
+                    <h5 class="modal-title text-center">Update Sons</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body text-left">
+
+                    <!-- SELECT FORM ACTION-->
+                    <div class="form-group row m-3">
+                        <label class="col-4 col-sm-3 col-form-label">Action</label>
+                        <select id="sons_action" class="col-8 col-sm-9 form-control" type="text">
+                            <option value="add_son" hidden selected>Add Son</option>
+                            <option value="add_son">Add Son</option>
+                            <option value="remove_son">Remove Son</option>
+                        </select>
+                    </div>
+
+                    <!-- Son microchip-->
+                    <div class="form-group row m-3" id="edit_modal_microchip">
+                        <label for="modal_microchip" class="col-4 col-sm-3 col-form-label">Microchip</label>
+                        <input type="user" class="col-8 col-sm-9 form-control" id="modal_microchip">
+                    </div>
+
+                    <div class="text-center" id="modal_sadd">
+                        <!-- add son-->
+                        <button type="button" class="btn btn_col m-1" id="submit-add-son-btn" onclick="add_son()">Add
+                            Son</button>
+                    </div>
+
+                    <div class="text-center" id="modal_sremove" style="display:none;">
+                        <!-- remove son-->
+                        <button type="button" class="btn btn_col m-1" id="submit-remove-son-btn" onclick="remove_son()">Remove
+                            Son</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- MODAL EDIT COMPETITION-->
+    <div class="modal fade" id="update-competition-modal" tabindex="-1" role="dialog">
+        <div class="modal-dialog modal-dialog-centered" role="document">
+            <!-- Modal Content -->
+            <form class="modal-content">
+
+                <!-- Modal Header-->
+                <div class="modal-header">
+                    <h5 class="modal-title text-center">Update Competitions</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+
+                <!-- Modal Body -->
+                <div class="modal-body text-left">
+
+                    <!-- SELECT FORM ACTION-->
+                    <div class="form-group row m-3">
+                        <label class="col-4 col-sm-3 col-form-label">Action</label>
+                        <select id="competition_action" class="col-8 col-sm-9 form-control" type="text">
+                            <option value="add_comp" hidden selected>Add Competition</option>
+                            <option value="add_comp">Add Competition</option>
+                            <option value="remove_comp">Remove Competition</option>
+                        </select>
+                    </div>
+
+                    <!-- CID -->
+                    <div class="form-group row m-3" id="edit_modal_cid">
+                        <label for="ucid" class="col-4 col-sm-3 col-form-label">Competion ID</label>
+                        <input type="user" class="col-8 col-sm-9 form-control" id="ucid">
+                    </div>
+
+                    <!-- CTYPE -->
+                    <div class="form-group row m-3" id="edit_modal_ctype">
+                        <label for="uctype" class="col-4 col-sm-3 col-form-label">Competition Type</label>
+                        <select id="uctype" class="col-8 col-sm-9 form-control" type="text">
+                            <option value="add_comp" hidden selected>Select Type</option>
+                            <option value="Show">Show</option>
+                            <option value="Lavoro">Work</option>
+                        </select>
+                    </div>
+
+                    <!-- CGROUP-->
+                    <div class="form-group row m-3" id="edit_modal_cgroup">
+                        <label for="ucgroup" class="col-4 col-sm-3 col-form-label">Competition Group</label>
+                        <select id="ucgroup" class="col-8 col-sm-9 form-control" type="text">
+                            <option value="add_comp" hidden selected>Select Group</option>
+                            <option value="1">1</option>
+                            <option value="2">2</option>
+                            <option value="3">3</option>
+                            <option value="4">4</option>
+                            <option value="5">5</option>
+                            <option value="6">6</option>
+                            <option value="7">7</option>
+                            <option value="8">8</option>
+                            <option value="9">9</option>
+                            <option value="10">10</option>
+                        </select>
+                    </div>
+
+                    <!-- CCLASS -->
+                    <div class="form-group row m-3" id="edit_modal_cclass">
+                        <label for="ucclass" class="col-4 col-sm-3 col-form-label">Competition Class</label>
+                        <select id="ucclass" class="col-8 col-sm-9 form-control" type="text">
+                            <option value="add_comp" hidden selected>Select Class</option>
+                            <option value="Campioni">Champions</option>
+                            <option value="Libera">Free</option>
+                            <option value="IPO-1">IPO-1</option>
+                            <option value="IPO-2">IPO-2</option>
+                            <option value="IPO-3">IPO-3</option>
+                            <option value="CAL">CAL</option>
+                            <option value="CAE">CAE</option>
+                            <option value="Esordienti">Debutant</option>
+                            <option value="Sheapdog">Sheepdog</option>
+                            <option value="Intermedia">Intermediate</option>
+                            <option value="Giovani">Young</option>
+                            <option value="Juniores">Junior</option>
+                            <option value="Veterani">Veteran</option>
+                            <option value="Fuori concorso">Out of Competition</option>
+                            <option value="RSR">RSR</option>
+                        </select>
+                    </div>
+
+                    <!-- CWON -->
+                    <div class="form-group row m-3" id="edit_modal_cwon">
+                        <label for="ucwon" class="col-4 col-sm-3 col-form-label">Competition Won</label>
+                        <select id="ucwon" class="col-8 col-sm-9 form-control" type="text">
+                            <option value="add_comp" hidden selected>Choose Yes/No</option>
+                            <option value="T">Yes</option>
+                            <option value="F">No</option>
+                        </select>
+                    </div>
+
+                    <!-- EID -->
+                    <div class="form-group row m-3" id="edit_modal_eid">
+                        <label for="ueid" class="col-4 col-sm-3 col-form-label">Event ID</label>
+                        <input type="user" class="col-8 col-sm-9 form-control" id="ueid">
+                    </div>
+
+                    <!-- ELOCATION -->
+                    <div class="form-group row m-3" id="edit_modal_elocation">
+                        <label for="uelocation" class="col-4 col-sm-3 col-form-label">Event Location</label>
+                        <input type="user" class="col-8 col-sm-9 form-control" id="uelocation">
+                    </div>
+
+                    <!-- EBEGIN -->
+                    <div class="form-group row m-3" id="edit_modal_ebegin">
+                        <label for="uebegin" class="col-4 col-sm-3 col-form-label">Event Begin</label>
+                        <input type="date" class="col-8 col-sm-9 form-control" id="uebegin">
+                    </div>
+
+                    <!-- EFINISH -->
+                    <div class="form-group row m-3" id="edit_modal_efinish">
+                        <label for="uefinish" class="col-4 col-sm-3 col-form-label">Event Finish</label>
+                        <input type="date" class="col-8 col-sm-9 form-control" id="uefinish">
+                    </div>
+
+                    <!-- EZIP -->
+                    <div class="form-group row m-3" id="edit_modal_ezip">
+                        <label for="uezip" class="col-4 col-sm-3 col-form-label">Event Zip</label>
+                        <input type="user" class="col-8 col-sm-9 form-control" id="uezip">
+                    </div>
+
+                    <div class="text-center" id="u_cadd">
+                        <button type="button" class="btn btn_col m-1" id="submit-add-competition-btn" onclick="add_competition()">Add
+                            Competition</button>
+                    </div>
+
+                    <div class="text-center" id="u_cremove" style="display:none;">
+                        <button type="button" class="btn btn_col m-1" id="submit-remove-competition-btn" onclick="remove_competition()">Remove
+                            Competition</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+
+    <!-- BACK TO TOP BUTTON-->
+    <a type="button" id="back2Top" class="btn btn-col my-3 align-items-center" title="Back to top" href="#"><i
+            class="fas  fa-chevron-up fa-lg"></i>
+        <p class="btn-text text-center m-0">TOP</p>
+    </a>
+
+    <!-- Response parsing js -->
+    <script src="../js/dog.js"></script>
+
+</body>
+
+</html>

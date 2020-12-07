@@ -1,0 +1,30 @@
+{
+    "dog": {
+        
+        "dog_microchip": "ABCDEFGHIL12345",
+        "tattoo code": "",
+        "kennel_name": "IL CANILE",
+        "father" : "Aramis",
+        "father microchip": "ABCDEFGHIL12345",
+        "mother" : "Audrey",
+        "mother microchip": "ABCDEFGHIL12345",
+        "name": "Fido",
+        "breed": "Pastore belga",
+        "birth": "01/02/19",
+        "sex": "M",
+        "coat_color": "Orange",
+        "weight": "30",
+        "height": "50",
+        "character": "Shy",
+        "particular_sign": "Thunder on left eye",
+        "teeth_structure": "",
+        "dna": "Erediti Laboratorio Analisi",       
+        "status": "",
+        "owner": "",
+        "pathologies": "",
+        "photo": "",
+        "fci_code": "0123456789ABCABCABCD",
+        "breeder_vat": "ADMJHS28I882K"
+
+    }
+}

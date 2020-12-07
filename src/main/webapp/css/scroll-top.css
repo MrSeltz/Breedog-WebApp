@@ -1,0 +1,13 @@
+#back2Top {
+    /*margin: 1rem;*/
+    display: none;
+    font-size: 1.2vw;
+    width: 8vw;
+    height: 4vw;
+    min-width: 70px;
+    min-height: 40px;
+    position: fixed;
+    left: 4vw;
+    bottom: 1em;
+    z-index: 1;
+}

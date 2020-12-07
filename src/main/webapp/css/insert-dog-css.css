@@ -1,0 +1,157 @@
+#main-container {
+    min-width: 400px;
+}
+
+body {
+    background-color: #BED3CD;
+    line-height: 1;
+}
+
+
+
+.block-elem {
+    margin-top: 2%;
+    background-color: #fcf8e8;
+    border-radius: 15px;
+    margin-bottom: 2%;
+}
+
+.dog-image {
+    padding: .375rem .75rem;
+    size: 1.2vw;
+}
+
+p {
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.subtitle {
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+}
+#title {
+    font-weight: bold;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/* label style */
+label {
+    padding-left: 2%;
+    width: fit-content;
+}
+
+input {
+    margin-left: 10px;
+    margin-top: 10px;
+    margin-bottom: 10px;
+    font-size: 1.2vw;
+    
+}
+.form-control {
+    margin-left: 2em;
+}
+
+#filldetails {
+    margin-left: 2%;
+    margin-top: 2%;
+    margin-bottom: 5%;
+}
+
+#dog-img-visualize {
+
+    margin-left: auto;
+    margin-right: auto;
+    display: block;
+    height: 15%;
+    width: 30%;
+    border-radius: 5px;
+    border: 3px solid #adadad;
+    padding: 2%;
+}
+
+
+/* Custom radio buttons */
+.radio-btn {
+     
+    margin-left: 35px;
+    
+}
+/* Removes original button */
+.radio-btn input[type='radio'] {
+    
+    display: none;
+    
+}
+/* Styles outer circle */
+.radio-btn label:before {
+    
+    content: " ";
+    display: inline-block;
+    position: relative;
+    top: 5px;
+    margin: 0 30px 0 0;
+    width: 20px;
+    height: 20px;
+    border-radius: 100%;
+    cursor: pointer;
+    border: 3px solid #725c5c;
+    background-color: transparent;
+    
+}
+.radio-btn label {
+    
+    position: relative;
+    
+}
+/* Styles inside circle */
+.radio-btn label input[type='radio']:checked+span {
+
+    border-radius: 100%;
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    top: 5px;
+    cursor: pointer;
+    display: block;
+    background-color: #725c5c;
+    
+}
+
+/* Submit Button CSS */
+#submit-btn {
+    display: block;
+	background-color: dimgray;
+	border: none;
+    border-radius: 5px;
+    font-size: 1.5vw;
+    width: 100%;
+    height: 3vw;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    color: #f3be89;
+    animation: linear 0.3s;
+
+}
+#submit-btn:hover {
+    color: #ec9c4c;
+    background-color: rgb(75, 75, 75);
+}
+
+#removedetails{
+
+    margin-left: 25px;
+}
+
+
+
+/* ------------------------------------MOBILE CSS----------------------------------------------------*/
+/* On screens that are 414px wide or less (should be latest Iphone Standard) */
+@media screen and (max-width: 600px) {
+
+
+}

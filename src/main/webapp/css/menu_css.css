@@ -1,0 +1,95 @@
+.sidebar{
+
+	background-color: rgba(228, 228, 228, 0.164);
+	border-right: 5px;
+	border-right-style: solid;
+	border-right-color: rgba(255, 255, 255, 0.158);
+
+}
+
+.navbar{
+
+	background-color: rgb(241, 255, 248);
+	border-bottom: 5px;
+	border-bottom-style: solid;
+	border-bottom-color: rgba(155, 187, 171, 0.973);
+}
+
+.modal-header {
+	background-color: rgb(255, 232, 203);
+	color: rgb(70, 69, 69);
+}
+
+body {
+	background-color: #BED3CD;
+	background-image: url(../media/illustration_3.jpg);
+	line-height: 1;
+}
+
+#main-row {
+	height: 100vh;
+}
+
+.navbar {
+    z-index: 100;
+}
+
+.block-elem {
+	background-color: #ffefdd00;
+	border-radius: 5px;
+	color: rgb(85, 85, 85);
+	font-family: 'Muli', sans-serif;
+}
+
+.block-elem_2 {
+	background-color: rgba(249, 255, 252, 0.938);
+	border-radius: 5px;
+	color: rgb(85, 85, 85);
+	font-family: 'Muli', sans-serif;
+	border: 3px;
+	border-style: solid;
+	border-color: rgba(255, 255, 255, 0.055);
+}
+
+#nav-logout-btn,
+#sidebar-logout-btn {
+	color: rgb(65, 65, 65);
+	background-color: rgb(245, 164, 126);
+	animation: linear 0.3s;
+}
+
+#nav-logout-btn:hover,
+#sidebar-logout-btn:hover {
+	color: rgb(245, 164, 126);
+	background-color: dimgray;
+	opacity: .9;
+}
+
+.btn_col{
+	background-color: dimgray;
+	color: whitesmoke;
+	opacity: 0.9;
+	transition: 0.4s;
+	font-family: 'Muli', sans-serif;
+}
+
+.btn_col:hover {
+	opacity: 1;
+	color: rgb(245, 164, 126);
+}
+
+thead{
+	background-color: rgba(107, 97, 92, 0.788);
+	color: white;
+	opacity: .9;
+}
+
+.ico_col{
+	color: dimgrey;
+	opacity: .9;
+}
+
+.ico_col:hover{
+	color: rgb(245, 164, 126);
+	opacity: 1;
+}

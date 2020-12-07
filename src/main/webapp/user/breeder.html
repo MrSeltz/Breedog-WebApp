@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+
+<html lang='eng' xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Web App based on a dog breeders database.">
+
+    <!-- Responsive meta-tag -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/dog.css">
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
+        crossorigin="anonymous"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+
+    <!-- FontAwesome -->
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+    <!-- Icon -->
+    <link rel="icon" href="../media/logo2.png" />
+    <title>BREEDOG.</title>
+
+
+    <!-- Scripts -->
+    <script src="../js/auth.js"></script>
+
+    <script src="../js/scroll-top.js"></script>
+
+    <script src="../js/menu.js"></script>
+
+    <!--<script src="../js/login_error.js"></script>-->
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/user_css.css">
+    <link rel="stylesheet" href="../css/scroll-top.css">
+    <link rel="stylesheet" href="../css/search.css">
+</head>
+
+
+<body>
+    <!-- MAIN CONTAINER -->
+    <div class="container-fluid" id="main-container">
+
+        <!-- TOPNAV -->
+
+        <!-- ROW -->
+        <div class="row" id="main-row">
+
+            <!-- SIDEBAR -->
+
+            <!-- MAIN CONTENT -->
+            <div class="main-content col-12 col-sm-9 col-md-10">
+
+                <!-- TOP SEARCH BOX-->
+                <div class="container p-3">
+                    <form action="../search" method="GET">
+                        <div class="input-group flex-nowrap">
+                            <input type="text" class="form-control" placeholder="Search Something!" name="query">
+                            <div class="input-group-prepend">
+                                <button class="btn btn_col" type="submit"><i class="fas fa-search"></i>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+
+
+                <!-- USER PROFILE MAIN INFORMATIONS-->
+                <div class="block-elem_2 container mx-auto my-3">
+
+                    <!-- ROW FOR PICTURE AND DESCRIPTION-->
+                    <div class="block-elem row p-4 mb-2" id="id-title">
+                        <!-- BREEDER PHOTO-->
+
+                        <div
+                            class="container col-5  p-3 d-flex flex-wrap align-items-center my-2 box_container">
+                            <img id="user-photo" class="img-fluid img-thumbnail rounded"
+                                alt="Responsive image">
+                        </div>
+
+                        <!-- BREEDER BASIC INFORMATIONS-->
+                        <div class="container col-5  p-3 my-2 box_container">
+                            <h3>Bio</h3>
+                            <p aria-placeholder="Insert you bio" id="user-description"></p>
+
+                        </div>
+                    </div>
+
+                    <div class="table-container col-12">
+                        <table class="table table-hover">
+                            <tbody id="user-info">
+
+                            </tbody>
+                        </table>
+                    </div>
+
+                </div>
+
+                <!-- BREED MAIN INFORMATIONS-->
+                <div class="block-elem_2 row container mx-auto my-3 p-4">
+                    <h2 class="p-3 text-center">Breeds</h2>
+                    <div class="table-container col-12">
+                        <table class="table table-hover">
+                            <thead>
+                                <tr>
+                                    <th scope="col">FCI Code</th>
+                                    <th scope="col">Group</th>
+                                    <th scope="col">Breed Name</th>
+                                    <th scope="col">Number</th>
+                                </tr>
+                            </thead>
+                            <tbody id="breed-info">
+                                <tr data-toggle="modal" data-target="#breed-modal" id="breed-row">
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </div>
+
+                <!-- BREEDER DOGS-->
+                <div class="block-elem_2 container mx-auto my-3 p-4 text-center">
+                    <h2 class=" col-12 text-center p-3">Dogs</h2>
+                    <!-- modified class as card-deck-->
+                    <div class="card-deck row text-center" id="articles">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <!-- SCRIPTS -->
+    <script src="../js/breeder_profile.js"></script>
+
+    <a type="button" id="back2Top" class="btn btn_col my-3 align-items-center" title="Back to top" href="#"><i
+            class="fas  fa-chevron-up fa-lg"></i>
+        <p class="btn-text text-center m-0">TOP</p>
+    </a>
+</body>
+
+</html>

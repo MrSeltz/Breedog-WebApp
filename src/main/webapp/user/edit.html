@@ -1,0 +1,596 @@
+<!DOCTYPE html>
+
+<html lang='eng' xmlns="http://www.w3.org/1999/html">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="description" content="Web App based on a dog breeders database.">
+
+    <!-- Responsive meta-tag -->
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+        integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="../css/dog.css">
+
+    <!-- jQuery CDN -->
+    <script src="https://code.jquery.com/jquery-3.3.1.min.js"
+        integrity="sha384-tsQFqpEReu7ZLhBV2VZlAu7zcOV+rXbYlF2cqB8txI/8aZajjp4Bqd+V6D5IgvKT"
+        crossorigin="anonymous"></script>
+
+    <!-- Bootstrap JS -->
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+        integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+        crossorigin="anonymous"></script>
+
+    <!-- FontAwesome -->
+    <script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+    <!-- GoogleFonts-->
+    <link href="https://fonts.googleapis.com/css2?family=Muli:ital,wght@0,400;1,600&display=swap" rel="stylesheet">
+
+    <!-- Icon -->
+    <link rel="icon" href="../media/logo2.png" />
+    <title>BREEDOG.</title>
+
+
+    <!-- Scripts -->
+    <script src="../js/auth.js"></script>
+
+    <script src="../js/scroll-top.js"></script>
+
+    <script src="../js/menu.js"></script>
+
+    <!--script src="../js/night_mode.js"></script-->
+
+    <!--<script src="../js/login_error.js"></script>-->
+
+    <!-- CSS -->
+    <link rel="stylesheet" href="../css/user_edit_css.css">
+    <link rel="stylesheet" href="../css/scroll-top.css">
+
+
+</head>
+
+<body>
+
+
+    <!-- MAIN CONTAINER -->
+    <div class="container-fluid" id="main-container">
+
+        <!-- TOPNAV -->
+
+        <!-- ROW -->
+        <div class="row" id="main-row">
+
+            <!-- SIDEBAR -->
+
+            <!-- MAIN CONTENT -->
+            <div class="main-content col-12 col-sm-9 col-md-10">
+
+                <!-- TOP SPACE-->
+                <div class="container p-3">
+
+                </div>
+
+
+                <!-- USER PROFILE MAIN INFORMATIONS-->
+                <div class="block-elem_2 container mx-auto my-3">
+
+                    <h2 class="p-3">
+                        <p id="title_edit"> Edit your Profile </p>
+                    </h2>
+
+                    <div class="container my-3 p-4 text-center">
+
+                        <div class="row" id="vat-row">
+
+                            <div class="col" id="vat-col">
+
+                                <!-- PROFILE EDIT BUTTON-->
+                                <button type="button" class="btn btn_col my-3 btn-lg btn-sq-lg" data-toggle="modal"
+                                    data-target="#cvat-modal" id="vat-btn">
+                                    <i class="far fa-address-card fa-2x" id="editico"></i>
+                                    <span style="color: rgb(245, 164, 126); font-size: larger; font-style: oblique;">ADD </span>
+                                         your <span
+                                        style="color: rgb(245, 164, 126); font-size: larger; font-style: oblique;">VAT</span>
+                                    number
+                                </button>
+
+                                <!-- MODAL CHANGE VAT -->
+                                <div class="modal fade" id="cvat-modal" tabindex="-1" role="dialog">
+                                    <div class="modal-dialog" role="document">
+                                        <!-- Modal Content -->
+                                        <form class="modal-content">
+
+                                            <!-- Modal Header-->
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">Add your <span
+                                                        style="color: rgb(245, 164, 126); font-style: oblique;">VAT</span>
+                                                    number</h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+
+                                            <!-- Modal Body -->
+                                            <div class="modal-body text-left">
+
+                                                <!-- Edit vat -->
+                                                <div class="form-group row m-3">
+                                                    <label for="user-vat" class="col-4 col-sm-3 col-form-label">VAT
+                                                        number</label>
+                                                    <input type="text" class="col-8 col-sm-9 form-control my-2"
+                                                        id="user-vat">
+                                                </div>
+
+                                                <!-- Submit Changes -->
+                                                <div class="text-center">
+                                                    <button type="submit" class="btn btn_col"
+                                                        id="edit-vat-btn">Submit</button>
+                                                </div>
+
+                                            </div>
+
+                                    </div>
+                                    </form>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col">
+
+                                <!-- CHANGE PHOTO BUTTON -->
+                                <button type="button" class="btn btn_col my-3 btn-lg btn-sq-lg" data-toggle="modal"
+                                    data-target="#photo-modal" id="photo-btn">
+                                    <i class="fa fa-user fa-2x" id="editico"></i>
+                                    Change your <span
+                                        style="color: rgb(245, 164, 126); font-style: oblique;">PHOTO</span>
+                                </button>
+
+                                <!-- MODAL CHANGE PHOTO -->
+                                <div class="modal fade" id="photo-modal" tabindex="-1" role="dialog">
+                                    <div class="modal-dialog" role="document">
+                                        <!-- Modal Content -->
+                                        <form class="modal-content">
+
+                                            <!-- Modal Header-->
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">Change your <span
+                                                        style="color: rgb(245, 164, 126); font-style: oblique;">PHOTO</span>
+                                                </h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+
+                                            <!-- Modal Body -->
+                                            <div class="modal-body text-left my-3">
+
+                                                <div
+                                                    class="container col-5  p-3 d-flex flex-wrap align-items-center my-2 box_container">
+                                                    <img id="user-photo" class="img-fluid img-thumbnail rounded"
+                                                        alt="Responsive image">
+                                                </div>
+
+                                                <input type="file" onchange="onFileSelected(event)" id="user-image"
+                                                    name="user-image" class="user-image" placeholder="Photo of the user"
+                                                    accept="image/png, image/jpeg" required>
+                                                </input>
+
+                                                <input type="hidden" class="form-control" id="photo">
+
+                                                <!-- Submit Changes -->
+                                                <div class="text-center">
+                                                    <button type="submit" class="btn btn_col cph_mt"
+                                                        id="edit-photo-btn">Apply</button>
+                                                </div>
+
+                                            </div>
+
+                                    </div>
+                                    </form>
+                                </div>
+
+                            </div>
+
+                            <div class="col">
+
+                                <!-- PROFILE EDIT BUTTON-->
+                                <button type="button" class="btn btn_col my-3 btn-lg btn-sq-lg" data-toggle="modal"
+                                    data-target="#cdes-modal" id="description-btn">
+                                    <i class="fas fa-quote-right fa-2x" id="editico"></i>
+                                    Edit your <span
+                                        style="color: rgb(245, 164, 126); font-style: oblique;">DESCRIPTION</span>
+                                </button>
+
+                                <!-- MODAL CHANGE DESCRIPTION -->
+                                <div class="modal fade" id="cdes-modal" tabindex="-1" role="dialog">
+                                    <div class="modal-dialog" role="document">
+                                        <!-- Modal Content -->
+                                        <form class="modal-content">
+
+                                            <!-- Modal Header-->
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">Edit your <span
+                                                        style="color: rgb(245, 164, 126); font-style: oblique;">DESCRIPTION</span>
+                                                </h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+
+                                            <!-- Modal Body -->
+                                            <div class="modal-body text-left">
+
+                                                <!-- Edit description -->
+                                                <div class="form-group row m-3">
+
+                                                    <label for="user-description" class="col-4 col-sm-3 col-form-label">About
+                                                        you</label>
+                                                    <textarea type="text" class="md-textarea form-control"
+                                                        rows="4" id="user-description"></textarea>
+
+                                                </div>
+
+                                                <!-- Submit Changes -->
+                                                <div class="text-center">
+                                                    <button type="submit" class="btn btn_col"
+                                                        id="edit-description-btn">Edit</button>
+                                                </div>
+
+                                            </div>
+
+                                    </div>
+                                    </form>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col">
+
+                                <!-- PROFILE EDIT BUTTON-->
+                                <button type="button" class="btn btn_col my-3 btn-lg btn-sq-lg" data-toggle="modal"
+                                    data-target="#cadd-modal" id="address-btn">
+                                    <i class="fas fa-map-marker-alt fa-2x" id="editico"></i>
+                                    Edit your <span
+                                        style="color: rgb(245, 164, 126); font-style: oblique;">ADDRESS</span>
+                                </button>
+
+                                <!-- MODAL CHANGE ADDRESS -->
+                                <div class="modal fade" id="cadd-modal" tabindex="-1" role="dialog">
+                                    <div class="modal-dialog" role="document">
+                                        <!-- Modal Content -->
+                                        <form class="modal-content">
+
+                                            <!-- Modal Header-->
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">Edit your <span
+                                                        style="color: rgb(245, 164, 126); font-style: oblique;">ADDRESS</span>
+                                                </h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+
+                                            <!-- Modal Body -->
+                                            <div class="modal-body text-left">
+
+                                                <!-- Edit street -->
+                                                <div class="form-group row m-3">
+                                                    <label for="user-address"
+                                                        class="col-4 col-sm-3 col-form-label">Street</label>
+                                                    <input type="text" class="col-8 col-sm-9 form-control"
+                                                        id="user-address">
+                                                </div>
+                                                
+                                                <!-- Edit number -->
+                                                <div class="form-group row m-3">
+                                                    <label for="user-number"
+                                                        class="col-4 col-sm-3 col-form-label">Number</label>
+                                                    <input type="text" class="col-8 col-sm-9 form-control"
+                                                        id="user-number">
+                                                </div>
+                                                
+                                                <!-- Edit city -->
+                                                <div class="form-group row m-3">
+                                                    <label for="user-city"
+                                                        class="col-4 col-sm-3 col-form-label">City</label>
+                                                    <input type="text" class="col-8 col-sm-9 form-control"
+                                                        id="user-city">
+                                                </div>
+
+                                                <!-- Edit zip -->
+                                                <div class="form-group row m-3">
+                                                    <label for="user-zip"
+                                                        class="col-4 col-sm-3 col-form-label">ZIP</label>
+                                                    <input type="text" class="col-8 col-sm-9 form-control"
+                                                        id="user-zip">
+                                                </div>
+
+                                                <!-- Submit Changes -->
+                                                <div class="text-center">
+                                                    <button type="submit" class="btn btn_col"
+                                                        id="edit-address-btn">Edit</button>
+                                                </div>
+                                                
+                                            </div>
+
+                                    </div>
+                                    </form>
+                                </div>
+
+                            </div>
+
+                            <div class="col">
+
+                                <!-- PROFILE EDIT BUTTON-->
+                                <button type="button" class="btn btn_col my-3 btn-lg btn-sq-lg" data-toggle="modal"
+                                    data-target="#cphone-modal" id="phone-btn">
+                                    <i class="fas fa-phone fa-2x" id="editico"></i>
+                                    Edit your <span
+                                        style="color: rgb(245, 164, 126); font-size: larger; font-style: oblique;">PHONE</span>
+                                </button>
+
+                                <!-- MODAL CHANGE phone -->
+                                <div class="modal fade" id="cphone-modal" tabindex="-1" role="dialog">
+                                    <div class="modal-dialog" role="document">
+                                        <!-- Modal Content -->
+                                        <form class="modal-content">
+
+                                            <!-- Modal Header-->
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">Edit your <span
+                                                        style="color: rgb(245, 164, 126); font-style: oblique;">PHONE</span>
+                                                    number</h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+
+                                            <!-- Modal Body -->
+                                            <div class="modal-body text-left">
+
+                                                <!-- Edit phone -->
+                                                <div class="form-group row m-3">
+                                                    <label for="user-telephone"
+                                                        class="col-4 col-sm-3 col-form-label">Phone number</label>
+                                                    <input type="text" class="col-8 col-sm-9 form-control my-2"
+                                                        id="user-telephone">
+                                                </div>
+
+                                                <!-- Submit Changes -->
+                                                <div class="text-center">
+                                                    <button type="submit" class="btn btn_col"
+                                                        id="edit-phone-btn">Edit</button>
+                                                </div>
+
+                                            </div>
+
+                                    </div>
+                                    </form>
+                                </div>
+
+                            </div>
+
+                        </div>
+
+                        <div class="row">
+
+                            <div class="col">
+
+                                <!-- PROFILE EDIT BUTTON-->
+                                <button type="button" class="btn btn_col my-3 btn-lg btn-sq-lg" data-toggle="modal"
+                                    data-target="#cmail-modal" id="email-btn">
+                                    <i class="far fa-envelope fa-2x" id="editico"></i>
+                                    Edit your <span
+                                        style="color: rgb(245, 164, 126); font-style: oblique;">E-MAIL</span>
+                                </button>
+
+                                <!-- MODAL CHANGE MAIL -->
+                                <div class="modal fade" id="cmail-modal" tabindex="-1" role="dialog">
+                                    <div class="modal-dialog" role="document">
+                                        <!-- Modal Content -->
+                                        <form class="modal-content">
+
+                                            <!-- Modal Header-->
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">Change your <span
+                                                        style="color: rgb(245, 164, 126); font-style: oblique;">E-MAIL</span>
+                                                </h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+
+                                            <!-- Modal Body -->
+                                            <div class="modal-body text-left">
+
+                                                <!-- Email -->
+                                                <div class="form-group row m-3">
+                                                    <label for="user-email"
+                                                        class="col-4 col-sm-3 col-form-label">Email</label>
+                                                    <input type="email" class="col-8 col-sm-9 form-control"
+                                                        id="user-email">
+                                                </div>
+
+                                                <!-- Confirm email >
+                                                <div class="form-group row m-3">
+                                                    <label for="user-email"
+                                                        class="col-4 col-sm-3 col-form-label">Confirm email</label>
+                                                    <input type="email" class="col-8 col-sm-9 form-control my-2"
+                                                        id="user-email">
+                                                </div-->
+
+                                                <!-- Submit Changes -->
+                                                <div class="text-center">
+                                                    <button type="submit" class="btn btn_col"
+                                                        id="edit-email-btn">Apply</button>
+                                                </div>
+
+                                            </div>
+
+                                    </div>
+                                    </form>
+                                </div>
+
+                            </div>
+
+                            <div class="col">
+
+                            </div>
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+                <!-- USER PROFILE MAIN INFORMATIONS-->
+                <div class="block-elem_2 container mx-auto my-3">
+
+                    <h2 class="p-3">
+                        <p id="title_edit"> Change settings </p>
+                    </h2>
+
+                    <div class="container my-3 p-4 text-center">
+
+                        <div class="row">
+
+                            <div class="col">
+
+                                <!-- CHANGE PASSWORD BUTTON-->
+                                <button type="button" class="btn btn_col my-3 btn-lg btn-sq-lg" data-toggle="modal"
+                                    data-target="#cpsw-modal" id="profile-btn">
+                                    <i class="fas fa-key fa-2x" id="editico"></i>
+                                    Change your <span
+                                        style="color: rgb(245, 164, 126); font-style: oblique;">PASSWORD</span>
+                                </button>
+
+                                <!-- MODAL CHANGE PASSWORD -->
+                                <div class="modal fade" id="cpsw-modal" tabindex="-1" role="dialog">
+                                    <div class="modal-dialog" role="document">
+                                        <!-- Modal Content -->
+                                        <form class="modal-content">
+
+                                            <!-- Modal Header-->
+                                            <div class="modal-header">
+                                                <h5 class="modal-title">Change your <span
+                                                        style="color: rgb(245, 164, 126); font-style: oblique;">PASSWORD</span>
+                                                </h5>
+                                                <button type="button" class="close" data-dismiss="modal"
+                                                    aria-label="Close">
+                                                    <span aria-hidden="true">&times;</span>
+                                                </button>
+                                            </div>
+
+                                            <!-- Modal Body -->
+                                            <div class="modal-body text-left">
+
+                                                <!-- OLD Password -->
+                                                <div class="form-group row m-3">
+                                                    <label for="old-password"
+                                                        class="col-4 col-sm-3 col-form-label">Current Password</label>
+                                                    <input type="password" class="col-8 col-sm-9 form-control my-2"
+                                                        id="old-password">
+                                                </div>
+
+                                                <!-- New Password -->
+                                                <div class="form-group row m-3">
+                                                    <label for="new-password" class="col-4 col-sm-3 col-form-label">New
+                                                        Password</label>
+                                                    <input type="password" class="col-8 col-sm-9 form-control my-2"
+                                                        id="new-password">
+                                                </div>
+
+                                                <!-- Confirm New Password -->
+                                                <div class="form-group row m-3">
+                                                    <label for="check-new-password"
+                                                        class="col-4 col-sm-3 col-form-label">Confirm Password</label>
+                                                    <input type="password" class="col-8 col-sm-9 form-control my-2"
+                                                        id="check-new-password"
+                                                        >
+                                                </div>
+
+                                                <!-- Submit Changes -->
+                                                <div class="text-center">
+                                                    <button type="submit" class="btn btn_col"
+                                                        id="change-password-btn">Apply</button>
+                                                </div>
+
+                                            </div>
+
+                                    </div>
+                                    </form>
+                                </div>
+
+                            </div>
+
+                            <div class="col-md-auto">
+                                
+                                <!--
+                                <div>
+                                    <input type="checkbox" class="checkbox" id="checkbox"></input>
+                                    <label for="checkbox" class="label">
+                                        <i class="fas fa-moon fa-2x "></i>
+                                        <i class="fas fa-sun fa-2x"></i>
+                                        <div class="ball"></div>
+
+                                    </label>
+                                </div>
+                                -->
+
+                            </div>
+
+                            <!--
+                            <div class="col-md-auto">
+
+                                <div class="container" id="nmc">
+                                    <p id="nmc_text">
+                                        <span style="color: rgb(245, 164, 126); font-style: oblique;">DAY</span> /
+                                        <span style="color: rgb(245, 164, 126); font-style: oblique;">NIGHT</span> mode
+                                    </p>
+                                </div>
+
+                            </div>
+                            -->
+
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+    </div>
+
+    <!-- SCRIPTS -->
+
+    <script src="../js/edit.js"></script>
+
+    <a type="button" id="back2Top" class="btn btn_col my-3 align-items-center" title="Back to top" href="#"><i
+            class="fas  fa-chevron-up fa-lg"></i>
+        <p class="btn-text text-center m-0">TOP</p>
+    </a>
+
+</body>
+
+</html>

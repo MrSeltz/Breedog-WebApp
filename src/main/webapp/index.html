@@ -1,0 +1,312 @@
+<!DOCTYPE html>
+
+<html lang='eng' xmlns="http://www.w3.org/1999/html">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="description" content="Web App based on a dog breeders database.">
+
+
+	<!-- Responsive meta-tag -->
+	<meta http-equiv="X-UA-Compatible" content="ie=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<!-- Bootstrap CSS -->
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css"
+	integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+
+	<!-- Index Custom CSS -->
+	<link rel="stylesheet" href="./css/index_css.css">
+	<link rel="stylesheet" href="./css/Login.css">
+	<script src='https://kit.fontawesome.com/a076d05399.js'></script>
+
+
+	<!-- jQuery CDN - UNCOMPRESSED-->
+	<script src="https://code.jquery.com/jquery-3.5.0.js"
+		integrity="sha256-r/AaFHrszJtwpe+tHyNi/XCfMxYpbsRg2Uqn0x3s2zc=" crossorigin="anonymous"></script>
+
+	<!-- Bootstrap JS -->
+	<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.0/js/bootstrap.min.js"
+		integrity="sha384-uefMccjFJAIv6A+rW+L4AHf99KvxDjWSu1z9VI8SKNVmz4sk7buKt/6v9KI65qnm"
+		crossorigin="anonymous"></script>
+
+	<link rel="icon" href="./media/logo2.png" />
+	<title>BREEDOG.</title>
+</head>
+
+<body>
+
+	<!-- Background -->
+	<div class="bg container-fluid">
+
+		<div class="navbar-header">
+
+			<div class="row">
+				<!-- Logo Block -->
+				<a href="index.html">
+					<img src="./media/logo.svg" id="logo" class="img-responsive" alt="Responsive image">
+				</a>
+
+				<!-- Center Block -->
+				<div class="col-sm" id="center-b">
+
+					<!-- Login -->
+					<button type="button" class="btn btn-big" id="log-b" data-toggle="modal" data-target="#pop1">
+						Login
+					</button>
+
+					<!--Login MODAL-->
+					<div class="modal fade" id="pop1" tabindex="-1" role="dialog"
+						aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+						<div class="modal-dialog modal-dialog-centered" role="document">
+							<!--form method='POST' action='auth'-->
+							<div class="modal-content">
+
+								<div class="container my-4 text-center">
+									<h2 id="Welcome">Hey, welcome back!</h2>
+									<img id="Welcome-image" src="./media/pngfuel.com (3).png">
+								</div>
+
+								<div class="container">
+									<!-- LOGIN INPUT-->
+									<div class="input-group flex-nowrap" type=text>
+										<div class="input-group-prepend text-align p-2"><span><i class="fas fa-user fa-2x"></i></span></div>
+										<input type="text" placeholder="Username" name="uname" id="input_username"
+											required>
+									</div>
+									<!-- PWD INPUT-->
+									<div class="input-group flex-nowrap">
+										<div class="input-group-prepend text-align p-2"><span><i class="fas fa-key fa-2x"></i></span></div>
+										<input type="password" placeholder="Password" name="psw" id="input_pwd"
+											required>
+									</div>
+								</div>
+
+								<div class="container contforgot" style='height:3vw; '>
+									<label style='float: left; '>
+										<input type="checkbox" checked="checked" name="remember"> Remember me
+									</label>
+									<span class="frgpsw" style='float: right; '> Forgot password? <a href="#" id="log-b" data-toggle="modal" data-target="#pop9"
+										style='height:25px; width:100px;float:right'>Get Help</a></span>
+										<div class="modal fade" id="pop9" tabindex="-1" role="dialog"
+										aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+											<div class="modal-dialog modal-dialog-centered" role="document">
+												<div class="modal-content">
+													<div class="container">
+															<form id="resetForm" action="reset_password" method="post">
+																<div class="container">
+																	<div style="margin-top: 10px;" class="input-group flex-nowrap" type=text>
+																		<div class="input-group-prepend text-align p-2"><span><i class="fas fa-user fa-2x"></i></span></div>
+																		<input type="text" placeholder="e-mail" name="email" id="email"
+																			required>
+																	</div>
+																	<div style="margin-bottom: 10px;" class="input-group flex-nowrap">
+																		<button type="submit" class="pwd">Send me new password</button>
+
+																	</div>
+																</div>
+																
+															</form>
+													</div>
+												</div>
+											</div>
+										</div>
+								</div>
+
+								<div class="container">
+									<button type='submit' class="logreg" id="login_input">Login</button>
+								</div>
+
+								<div class="container">
+									<span class="psw"
+										style="text-align: center; margin-bottom: 10px; width:100%; display: inline-block;">Don't
+										have an account yet? <a style="display: inline;" href="#" data-toggle="modal" data-target="#pop2" data-dismiss="modal">Sign-up</a></span>
+								</div>
+
+							</div >
+
+						</div>
+					</div>
+
+					<!--Register-->
+					<button type="button" class="btn btn-big btn-orange" id="reg-b" data-toggle="modal"
+						data-target="#pop2">
+						Register
+					</button>
+
+					<!--Register MODAL-->
+					<div class="modal fade" id="pop2" tabindex="-1" role="dialog"
+						aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+						<div class="modal-dialog modal-dialog-centered" role="document">
+							<div class="modal-content">
+								<div class="container">
+									<div class="container conttitle">
+										<h2>You're a breeder?</h2>
+										<h2 style="color:#e6b677; display: inline;">Create your account.</h2>
+										<!--<h2>Just some information about you ...</h2>-->
+									</div>
+
+									<div>
+										<input type="text" class="form-control" placeholder="Username" name="uname" id="runame" required>
+										<input type="password" class="form-control" placeholder="Password" name="psw"  id="rpsw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"required>
+										<input type="password" class="form-control" placeholder="Confirm Password" name="co_psw"  id="rco_psw" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters"required>
+										
+										<p style="font-size: 10px;" class="pl-3 mt-0">Your password must be between 8 and 30 characters,
+											contain at least one uppercase, at least one lowercase letter, at least one
+											number digit</p>
+										<input type="date" class="form-control" id="birth" name="birth" placeholder="YYYY-MM-DD" pattern="\d{4}-\d{2}-\d{2}" required>
+										
+										<input type="text" class="form-control" placeholder="Name" name="name"  id="rname" required>
+										<input type="text" class="form-control" placeholder="Surname" name="surname"  id="rsurname" required>
+										<span>
+											<input style="width: 70%; display: inline-block;" type="text"
+												class="form-control" placeholder="Address" name="address"  id="raddress" required>
+										</span>
+										<span>
+												<input style="width: 25%; float: right;" type="number"
+												class="form-control" placeholder="N°" name="n" min="1"  id="rn" required >
+										</span>
+										<span>
+											<input style="width: 70%; display: inline-block;" type="text"
+												class="form-control" placeholder="City" name="city"  id="rcity" required>
+										</span>
+										<span>
+											<input style="width: 25%; float: right;" type="text"
+												class="form-control"placeholder="CAP" name="cap" pattern="^[0-9]{5}$"  id="rcap" required>
+										</span>
+										<input type="text" class="form-control" placeholder="Fiscal Code" pattern="^[a-zA-Z]{6}[0-9]{2}[a-zA-Z][0-9]{2}[a-zA-Z][0-9]{3}[a-zA-Z]$" name="breederfc"  id="rbreederfc" required>
+										<input type="tel" class="form-control" placeholder="Phone Number" name="phnum"  id="rphnum" required>
+										<input type="email" class="form-control" placeholder="E-mail Address" name="email"  id="remail" required>
+
+									</div>
+									<div class="container">
+										<button class="logreg" type="submit" id="register_input">Register</button>
+									</div>
+								</div>
+
+							</div>
+						</div>
+					</div>
+
+				</div>
+
+				<!-- Right Block -->
+				<div class="col-sm" id="right-b">
+
+					<!-- About us -->
+					<button type="button" class="btn-big btn-link" id="about-b" data-toggle="modal" data-target="#pop3">
+						About us
+					</button>
+
+					<!--About us MODAL-->
+					<div class="modal fade" id="pop3" tabindex="-1" role="dialog"
+						aria-labelledby="exampleModalCenterTitle" aria-hidden="true">
+						<div class="modal-dialog modal-dialog-centered" role="document">
+							<div class="modal-content">
+
+								<div class="modal-header">
+									<h5 class="modal-title" id="exampleModalLongTitle">Who we are?</h5>
+
+								</div>
+								<div class="modal-body" id="about_text">
+									We are collective of dog breeders focused on promoting dog sports and interaction among breeders.
+								</div>
+
+							</div>
+
+						</div>
+					</div>
+
+				</div>
+
+			</div>
+		</div>
+
+		<!-- Home Page lower-half-->
+		<div>
+			<!-- Main Content -->
+			<div class="row main-content">
+
+				<h1>JOIN THE LARGEST COMMUNITY<br>OF DOG BREEDERS IN THE WORLD</h1>
+
+				<!--Learn more-->
+				<button type="button" class="btn btn-big" id="lea-b" data-toggle="modal" data-target="#pop4">
+					Learn More
+				</button>
+
+				<!--Learn more MODAL-->
+				<div class="modal fade" id="pop4" tabindex="-1" role="dialog" aria-labelledby="exampleModalCenterTitle"
+					aria-hidden="true">
+					<div class="modal-dialog modal-dialog-centered" role="document">
+						<div class="modal-content">
+
+							<div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
+								<ol class="carousel-indicators">
+									<li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
+									<li data-target="#carouselExampleIndicators" data-slide-to="1"></li>
+									<li data-target="#carouselExampleIndicators" data-slide-to="2"></li>
+								</ol>
+								<div class="carousel-inner">
+									<div class="carousel-item active">
+										<strong>Breedog.</strong> is the right tool<br />for breeders from<br />all
+										around the world.
+									</div>
+									<div class="carousel-item">
+										<strong>Breedog.</strong> help you to find the<br />right partners for your
+										dogs.
+									</div>
+									<div class="carousel-item">
+										<strong>Breedog.</strong> can help you to find<br />and choose a puppy for
+										you<br />or for your family!
+									</div>
+								</div>
+								<a class="carousel-control-prev" href="#carouselExampleIndicators" role="button"
+									data-slide="prev">
+									<span class="carousel-control-prev-icon" aria-hidden="true"></span>
+									<span class="sr-only">Previous</span>
+								</a>
+								<a class="carousel-control-next" href="#carouselExampleIndicators" role="button"
+									data-slide="next">
+									<span class="carousel-control-next-icon" aria-hidden="true"></span>
+									<span class="sr-only">Next</span>
+								</a>
+							</div>
+
+						</div>
+
+					</div>
+				</div>
+
+				<div class="wrapper">
+					<form action="./search" method="GET">
+						<div class="search_box">
+							<input type="text" placeholder="Search your dream dog..." class="change" name="query">
+							<button type="submit" class="btn btn-link btn-xs">
+								<i class="fas fa-search"></i>
+							</button>
+						</div>
+					</form>
+
+				</div>
+
+			</div>
+		</div>
+	</div><!-- End background container-->
+
+	<!-- authentication and index page scripts-->
+	<script src="./js/auth.js"></script>
+	<!--<script src="./js/index_js.js"></script>
+	<!-- Mokup Login system-->
+	<!--<script src="./mockup-data/login-mockup.js"></script>-->
+
+	<script src="./js/login.js"></script>
+	<script type="text/javascript">
+ 
+		$(document).ready(function() {
+			
+	 
+		});
+	</script>
+</body>
+
+</html>
