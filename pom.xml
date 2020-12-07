@@ -1,0 +1,232 @@
+<?xml version="1.0"?>
+
+<project xmlns="http://maven.apache.org/POM/4.0.0" 
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+
+	<modelVersion>4.0.0</modelVersion>
+
+	<groupId>it.unipd.dei.webapp</groupId>
+
+	<artifactId>Kennel-WA</artifactId>
+
+	<version>1.0</version>
+
+	<packaging>war</packaging>
+
+
+	<!--Project description elements -->
+
+	<name>Kennel-WA</name>
+
+	<description>Web Application based on a dog breeders database.</description>
+
+	<inceptionYear>2020</inceptionYear>
+
+	<developers>
+		<developer>
+			<id></id>
+			<name>Andrea Manzato</name>
+		</developer>
+
+		<developer>
+			<id>Kraing</id>
+			<name>Aniello Xie</name>
+		</developer>
+
+		<developer>
+			<id></id>
+			<name>Carlo Facchin</name>
+		</developer>
+
+		<developer>
+			<id></id>
+			<name>Elia Secchiero</name>
+		</developer>
+
+		<developer>
+			<id></id>
+			<name>Filippo Cenzi</name>
+		</developer>
+
+		<developer>
+			<id></id>
+			<name>Tobia Fiorese</name>
+		</developer>
+
+		<developer>
+			<id></id>
+			<name>Tommaso Bianchi</name>
+		</developer>
+	</developers>
+
+	<licenses>
+		<license>
+			<name>The Apache Software License, Version 2.0</name>
+			<url>http://www.apache.org/licenses/LICENSE-2.0.txt</url>
+			<distribution>repo</distribution>
+		</license>
+	</licenses>
+
+	<organization>
+		<name>Department of Information Engineering (DEI), University of Padua, Italy</name>
+	</organization>
+
+
+	<!-- Build Settings -->
+
+	<!-- Encoding used -->
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+
+	<!-- Configuration of default build lifecycle -->
+	<build>
+		<defaultGoal>compile</defaultGoal>
+
+		<!-- source folder -->
+		<sourceDirectory>${basedir}/src/main/java</sourceDirectory>
+
+		<!-- compiled code folder -->
+		<directory>${basedir}/target</directory>
+
+		<!-- name of generated package -->
+		<finalName>${project.artifactId}-${project.version}</finalName>
+
+
+		<!-- Configuration of plugins for different goals -->
+		<plugins>
+
+			<!-- compiler plugin: sorce/target code is for Java 1.8 -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>3.8.0</version>
+				<configuration>
+					<source>1.8</source>
+					<target>1.8</target>
+
+					<!-- exclude specific file from the build 
+					<exclude>it/unipd/dei/breedog/resource/Dog.java</exclude>
+					<exclude>it/unipd/dei/breedog/database/CreateDogDatabase.java</exclude>-->
+				</configuration>
+			</plugin>
+
+			<!-- javadoc plugin: output in javadoc folder -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-javadoc-plugin</artifactId>
+				<version>3.1.0</version>
+				<configuration>
+					<reportOutputDirectory>${basedir}/javadoc</reportOutputDirectory>
+					<author>true</author>
+					<nosince>false</nosince>
+					<show>protected</show>
+				</configuration>
+			</plugin>
+
+			<!-- packager plugin: create a WAR file to be deployed -->
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-war-plugin</artifactId>
+				<version>3.2.2</version>
+				<configuration>
+					<webXml>${basedir}/src/main/webapp/WEB-INF/web.xml</webXml>
+				</configuration>
+			</plugin>
+		</plugins>
+
+
+		<resources>
+			<!-- copy HTML files to target directory -->
+			<resource>
+				<targetPath>${basedir}/target/${project.artifactId}-${project.version}/user</targetPath>
+				<directory>${basedir}/src/main/webapp/user</directory>
+				<includes>
+					<include>**/*.*</include>
+				</includes>
+			</resource>
+
+			<!-- copy CSS files to target directory -->
+			<resource>
+				<targetPath>${basedir}/target/${project.artifactId}-${project.version}/css</targetPath>
+				<directory>${basedir}/src/main/webapp/css</directory>
+				<includes>
+					<include>**/*.*</include>
+				</includes>
+			</resource>
+
+			<!-- copy HTML files to target directory -->
+			<resource>
+				<targetPath>${basedir}/target/${project.artifactId}-${project.version}/js</targetPath>
+				<directory>${basedir}/src/main/webapp/js</directory>
+				<includes>
+					<include>**/*.*</include>
+				</includes>
+			</resource>
+		</resources>
+	</build>
+
+	<!-- Dependencies -->
+	<dependencies>
+
+		<!-- javax servlet api -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>javax.servlet-api</artifactId>
+			<version>4.0.0</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- apache taglibs -->
+		<dependency>
+			<groupId>org.apache.taglibs</groupId>
+			<artifactId>taglibs-standard-spec</artifactId>
+			<version>1.2.5</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.taglibs</groupId>
+			<artifactId>taglibs-standard-impl</artifactId>
+			<version>1.2.5</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.taglibs</groupId>
+			<artifactId>taglibs-standard-jstlel</artifactId>
+			<version>1.2.5</version>
+		</dependency>
+
+		<!-- postgresql -->
+		<dependency>
+			<groupId>org.postgresql</groupId>
+			<artifactId>postgresql</artifactId>
+			<version>42.2.2</version>
+		</dependency>
+
+		<!-- tomcat -->
+		<dependency>
+			<groupId>org.apache.tomcat</groupId>
+			<artifactId>tomcat-jdbc</artifactId>
+			<version>9.0.7</version>
+			<scope>provided</scope>
+		</dependency>
+
+		<!-- Jackson - fast JSON processor for JAVA-->
+		<dependency>
+			<groupId>com.fasterxml.jackson.core</groupId>
+			<artifactId>jackson-core</artifactId>
+			<version>2.9.5</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>com.sun.mail</groupId>
+			<artifactId>javax.mail</artifactId>
+			<version>1.6.0</version>
+		</dependency>
+		
+		<dependency>
+			<groupId>org.apache.commons</groupId>
+			<artifactId>commons-lang3</artifactId>
+			<version>3.8.1</version>
+		</dependency>
+
+	</dependencies>
+</project>

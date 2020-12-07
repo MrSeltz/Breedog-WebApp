@@ -1,0 +1,19 @@
+# Java
+*.class
+target/
+javadoc/
+log/
+
+# Package Files
+*.jar
+*.war
+*.ear
+*.zip
+*.tar.gz
+*.rar
+
+### OSX ###
+.DS_Store
+
+#ide setup
+.atom-live-server.json
