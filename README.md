@@ -6,6 +6,8 @@ The front-end is created by scratch using HTML5, CSS, JS and Bootstrap.
 The back-end is based on Java Servlet.
 The original version was developed on a private Bitbucket repo, this is a cloned one.
 
+![alt text] (https://github.com/MrSeltz/Breedog-WebApp/blob/main/landing.png?raw=true)
+
 Credits:
 - Andrea Manzato
 - Aniello Xie
